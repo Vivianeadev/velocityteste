@@ -3,654 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Velocity Article Engine · Super Eigend · Super IA</title>
+    <title>Acesso Restrito · Velocity Article Engine</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+       :root{--deep-abyss:#020b13;--ocean-blue:#061f2f;--petrol-depths:#0a3147;--liquid-gold:#b8860b;--gold-shimmer:#d4a843;--gold-pale:#e6c27a;--error-red:#c0392b;--error-glow:#e74c3c;--font-display:'Playfair Display', serif;--font-body-lux:'Cinzel', serif;--font-ui:'Inter', sans-serif}*{margin:0;padding:0;box-sizing:border-box}body{font-family:var(--font-ui);background:radial-gradient(ellipse at center,#0d3b56 0%,#061e2f 40%,#020c14 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}.superia-splash{position:fixed;inset:0;z-index:10;background:radial-gradient(ellipse at center,#0d3b56 0%,#061e2f 40%,#020c14 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity 0.8s cubic-bezier(.4,0,.2,1),visibility 0.8s;overflow:hidden}.superia-splash.fade-out{opacity:0;visibility:hidden;pointer-events:none}.particles-container{position:absolute;inset:0;pointer-events:none}.particle{position:absolute;width:2px;height:2px;background:#b8860b;border-radius:50%;animation:particleFloat 6s infinite ease-in-out;opacity:0}.particle:nth-child(1){left:10%;top:20%;animation-delay:0s}.particle:nth-child(2){left:25%;top:60%;animation-delay:0.8s}.particle:nth-child(3){left:40%;top:30%;animation-delay:1.6s}.particle:nth-child(4){left:55%;top:70%;animation-delay:2.4s}.particle:nth-child(5){left:70%;top:15%;animation-delay:3.2s}.particle:nth-child(6){left:80%;top:50%;animation-delay:4.0s}.particle:nth-child(7){left:15%;top:85%;animation-delay:4.8s}.particle:nth-child(8){left:90%;top:35%;animation-delay:1.2s}.particle:nth-child(9){left:50%;top:45%;animation-delay:3.6s}.particle:nth-child(10){left:35%;top:10%;animation-delay:5.2s}.particle:nth-child(11){left:65%;top:80%;animation-delay:2.0s}.particle:nth-child(12){left:5%;top:40%;animation-delay:4.4s}@keyframes particleFloat{0%{opacity:0;transform:translateY(0) scale(.5)}10%{opacity:.8}30%{opacity:.4;transform:translateY(-30px) scale(1.2)}50%{opacity:.7;transform:translateY(-15px) scale(.8)}70%{opacity:.3;transform:translateY(-40px) scale(1.4)}90%{opacity:.6}100%{opacity:0;transform:translateY(-60px) scale(.3)}}.golden-line{position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:100%;background:linear-gradient(180deg,transparent 0%,rgb(184 134 11 / .4) 20%,rgb(184 134 11 / .15) 50%,rgb(184 134 11 / .4) 80%,transparent 100%);animation:goldenLinePulse 3s ease-in-out infinite}.golden-line:nth-child(2){left:48%;animation-delay:0.5s;width:.5px}.golden-line:nth-child(3){left:52%;animation-delay:1s;width:.5px}@keyframes goldenLinePulse{0%,100%{opacity:.3}50%{opacity:.7}}.horizontal-line{position:absolute;left:50%;transform:translateX(-50%);width:300px;height:1px;background:linear-gradient(90deg,transparent,rgb(184 134 11 / .3),transparent);animation:horizontalLinePulse 4s ease-in-out infinite}.horizontal-line.top{top:18%}.horizontal-line.bottom{bottom:18%;animation-delay:2s}@keyframes horizontalLinePulse{0%,100%{opacity:.2;width:300px}50%{opacity:.6;width:500px}}.splash-content{position:relative;z-index:2;text-align:center;padding:2rem}.brand-tag{font-family:'Inter',sans-serif;font-size:.55rem;text-transform:uppercase;letter-spacing:6px;color:rgb(184 134 11 / .7);margin-bottom:1.5rem;animation:fadeInUp 1s ease forwards;opacity:0;animation-delay:0.3s}.splash-title{font-family:'Cinzel',serif;font-size:clamp(2.2rem, 5vw, 3.8rem);font-weight:600;color:#fff;letter-spacing:8px;margin-bottom:.3rem;animation:fadeInUp 1s ease forwards;opacity:0;animation-delay:0.5s;text-shadow:0 0 60px rgb(184 134 11 / .3)}.splash-title span{color:#b8860b;font-weight:700}.splash-subtitle{font-family:'Marcellus',serif;font-size:clamp(0.8rem, 1.5vw, 1.1rem);color:rgb(255 255 255 / .6);letter-spacing:4px;margin-bottom:2.5rem;animation:fadeInUp 1s ease forwards;opacity:0;animation-delay:0.7s}.splash-divider{display:flex;align-items:center;justify-content:center;gap:15px;margin-bottom:2.5rem;animation:fadeInUp 1s ease forwards;opacity:0;animation-delay:0.9s}.divider-wing{width:50px;height:1px;background:linear-gradient(90deg,transparent,#b8860b)}.divider-wing.right{background:linear-gradient(90deg,#b8860b,transparent)}.divider-diamond{width:8px;height:8px;background:#b8860b;transform:rotate(45deg);box-shadow:0 0 20px rgb(184 134 11 / .6)}.enter-btn{font-family:'Cinzel',serif;font-size:.75rem;text-transform:uppercase;letter-spacing:5px;color:#fff;background:#fff0;border:1.5px solid rgb(184 134 11 / .4);padding:14px 40px;cursor:pointer;transition:all 0.5s ease;position:relative;overflow:hidden;animation:fadeInUp 1s ease forwards;opacity:0;animation-delay:1.1s}.enter-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgb(184 134 11 / .15) 0%,rgb(184 134 11 / .05) 50%,transparent 100%);transition:opacity 0.5s ease}.enter-btn:hover{border-color:#b8860b;color:#b8860b;box-shadow:0 0 40px rgb(184 134 11 / .2),inset 0 0 40px rgb(184 134 11 / .05);letter-spacing:8px;transform:translateY(-2px)}.enter-btn:hover::before{opacity:1}.splash-loader{margin-top:2rem;display:flex;gap:6px;justify-content:center;animation:fadeInUp 1s ease forwards;opacity:0;animation-delay:1.2s}.dot{width:4px;height:4px;background:rgb(184 134 11 / .6);border-radius:50%;animation:dotPulse 1.5s ease-in-out infinite}.dot:nth-child(2){animation-delay:0.2s}.dot:nth-child(3){animation-delay:0.4s}@keyframes dotPulse{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.5)}}.version-tag{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-family:'Inter',sans-serif;font-size:.5rem;color:rgb(255 255 255 / .25);letter-spacing:3px;animation:fadeInUp 1s ease forwards;opacity:0;animation-delay:1.3s}@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.password-overlay{position:fixed;inset:0;background:rgb(0 0 0 / .85);z-index:100;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(10px);animation:fadeIn 0.5s ease}.password-overlay.fade-out{opacity:0;transition:opacity 0.3s}.password-box{background:linear-gradient(145deg,#0d3b56 0%,#061e2f 100%);border:1px solid rgb(184 134 11 / .4);border-radius:16px;padding:2.5rem;width:90%;max-width:400px;text-align:center;box-shadow:0 20px 60px rgb(0 0 0 / .8),0 0 40px rgb(184 134 11 / .2);animation:fadeInUp 0.5s ease}.password-box h2{font-family:'Cinzel',serif;color:#fff;font-size:1.2rem;letter-spacing:3px;margin-bottom:.3rem}.password-box .gold-line{width:60px;height:2px;background:linear-gradient(90deg,transparent,#b8860b,transparent);margin:.8rem auto 1.5rem}.password-box input{width:100%;padding:12px 16px;background:rgb(255 255 255 / .05);border:1px solid rgb(184 134 11 / .3);border-radius:8px;color:#fff;font-family:'Marcellus',serif;font-size:1rem;letter-spacing:4px;text-align:center;outline:none;transition:border-color 0.3s,box-shadow 0.3s}.password-box input:focus{border-color:#b8860b;box-shadow:0 0 20px rgb(184 134 11 / .3)}.password-box .btn-row{display:flex;gap:10px;justify-content:center;margin-top:1.5rem}.password-btn{font-family:'Cinzel',serif;font-size:.7rem;text-transform:uppercase;letter-spacing:3px;padding:10px 24px;border-radius:6px;cursor:pointer;transition:all 0.4s ease;background:#fff0;color:#fff;border:1px solid rgb(184 134 11 / .4)}.password-btn.primary{background:rgb(184 134 11 / .2);border-color:#b8860b}.password-btn:hover{background:rgb(184 134 11 / .3);border-color:#b8860b;box-shadow:0 0 20px rgb(184 134 11 / .3);transform:translateY(-2px)}.error-msg{color:#c78b1a;font-size:.7rem;margin-top:.6rem;min-height:1.2em}@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    </style>
 </head>
 <body>
-    <!-- ========== CABEÇALHO PAUTAZERO (HOME) + LINK RETORNAR AO INÍCIO (CANTO ESQUERDO, DISCRETO) ========== -->
-    <header class="pz-header">
-        <div class="header-inner">
-            <a href="https://vivianeadev.github.io/pauta/" class="pz-logo">Pauta<span>Zero</span></a>
+    <div class="superia-splash" id="superiaSplash">
+        <div class="particles-container">
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+            <div class="particle"></div><div class="particle"></div><div class="particle"></div>
         </div>
-    </header>
-    <div class="pz-breaking-news" id="breakingNews">
-        <a href="https://vivianeadev.github.io/pauta/" class="pz-breaking-label"><i class="fas fa-arrow-left"></i> Retornar ao início</a>
+        <div class="golden-line"></div><div class="golden-line"></div><div class="golden-line"></div>
+        <div class="horizontal-line top"></div><div class="horizontal-line bottom"></div>
+        <div class="splash-content">
+            <div class="brand-tag">A Revista Digital do futuro</div>
+            <h1 class="splash-title">Bem<span> vindo</span></h1>
+            <p class="splash-subtitle">a excelência de um Editorial de Respeito</p>
+            <div class="splash-divider">
+                <div class="divider-wing"></div><div class="divider-diamond"></div><div class="divider-wing right"></div>
+            </div>
+            <button class="enter-btn" id="enterBtn">
+                <i class="fas fa-crown" style="margin-right: 10px; font-size: 0.7rem;"></i>Area Reservada
+            </button>
+            <div class="splash-loader">
+                <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            </div>
+        </div>
+        <div class="version-tag">v1.0 · Autômato Editorial de Rigor Supremo</div>
     </div>
-
-    <!-- ========== VELOCITY ARTICLE ENGINE ========== -->
-    <div class="main-container">
-        <div class="form-card">
-            <h1>Velocity <span>Article Engine</span></h1>
-            <div class="row-2">
-                <div class="form-group">
-                    <label><i class="fas fa-building"></i> Nome do Portal</label>
-                    <input type="text" id="portalName" placeholder="Pauta Zero" value="Pauta Zero" oninput="updatePreview()">
-                </div>
-                <div class="form-group">
-                    <label><i class="fas fa-quote-right"></i> Slogan</label>
-                    <input type="text" id="portalSlogan" placeholder="jardinagem · beleza · natureza" value="jardinagem · beleza · natureza" oninput="updatePreview()">
-                </div>
-            </div>
-            <div class="row-2">
-                <div class="form-group">
-                    <label><i class="fas fa-heading"></i> Título</label>
-                    <input type="text" id="title" placeholder="O Cultivo de Rosas: Da Tradição à Inovação" value="O Cultivo de Rosas: Da Tradição à Inovação" oninput="autoSlug();updatePreview()">
-                </div>
-                <div class="form-group">
-                    <label><i class="fas fa-subscript"></i> Subtítulo (opcional)</label>
-                    <input type="text" id="subtitle" placeholder="Um guia completo para o cultivo de roseiras em ambientes tropicais" value="Um guia completo para o cultivo de roseiras em ambientes tropicais" oninput="updatePreview()">
-                </div>
-            </div>
-            <div class="row-2">
-                <div class="form-group">
-                    <label><i class="fas fa-layer-group"></i> Eixo <span style="font-weight: normal; font-size: 0.65rem; color: var(--aged-gold);">(os eixos salvos aparecem no gerenciador abaixo e no datalist)</span></label>
-                    <input type="text" id="eixo" placeholder="plantas-e-natureza" value="plantas-e-natureza" oninput="updatePreview()" list="eixosSuggest">
-                    <datalist id="eixosSuggest"></datalist>
-                    <div class="field-watermark">🔹 Se o eixo já existir, o novo tema será agrupado automaticamente.</div>
-                </div>
-                <div class="form-group">
-                    <label><i class="fas fa-tag"></i> Tema</label>
-                    <input type="text" id="tema" placeholder="rosas" value="rosas" oninput="updatePreview()">
-                </div>
-            </div>
-            <div class="row-3">
-                <div class="form-group">
-                    <label><i class="fas fa-link"></i> Slug (URL)</label>
-                    <input type="text" id="slug" placeholder="cultivo-de-rosas-tradicao-inovacao" value="cultivo-de-rosas-tradicao-inovacao">
-                </div>
-                <div class="form-group">
-                    <label><i class="far fa-calendar-alt"></i> Agendar (Data e Hora)</label>
-                    <input type="datetime-local" id="publishDateTime" oninput="updatePreview()">
-                    <div class="field-watermark">🔹 Deixe em branco para usar a data/hora atual.</div>
-                </div>
-                <div class="form-group">
-                    <label><i class="far fa-clock"></i> Tempo de leitura</label>
-                    <input type="text" id="readTime" placeholder="8 min" value="8 min" oninput="updatePreview()">
-                </div>
-            </div>
-            <div class="row-2">
-                <div class="form-group">
-                    <label><i class="fas fa-user-edit"></i> Autor</label>
-                    <input type="text" id="author" placeholder="Dra. Flora Campos" value="Dra. Flora Campos" oninput="updatePreview()">
-                </div>
-                <div class="form-group">
-                    <label><i class="fas fa-align-left"></i> Resumo / Descrição</label>
-                    <input type="text" id="excerpt" placeholder="Descubra os segredos do cultivo de rosas, da preparação do solo às técnicas modernas de hibridação." value="Descubra os segredos do cultivo de rosas, da preparação do solo às técnicas modernas de hibridação." oninput="updatePreview()">
-                </div>
-            </div>
-            <div class="form-group">
-                <label><i class="fas fa-tags"></i> Tags (separadas por vírgula)</label>
-                <input type="text" id="tags" placeholder="rosas, jardinagem, cultivo, flores" value="rosas, jardinagem, cultivo, flores" oninput="updatePreview()">
-                <div class="field-watermark">🔹 Essenciais para SEO. Serão exibidas no rodapé do artigo.</div>
-            </div>
-            <div class="form-group">
-                <label><i class="fas fa-fingerprint"></i> Marca d'água / Ref. <span style="font-weight: normal; font-size: 0.65rem; color: var(--aged-gold);">(ex: 0002-rosas)</span></label>
-                <input type="text" id="watermarkRef" placeholder="0002-rosas" value="0002-rosas" oninput="updatePreview()">
-                <div class="field-watermark">🔹 Aparecerá discretamente no rodapé como registro pessoal.</div>
-            </div>
-            <div class="form-group">
-                <label><i class="fas fa-feather-alt"></i> Biografia do Colunista (opcional)</label>
-                <textarea id="authorBio" rows="2" placeholder="Botânica e paisagista com mais de 20 anos de experiência em jardinagem ornamental." oninput="updatePreview()">Botânica e paisagista com mais de 20 anos de experiência em jardinagem ornamental.</textarea>
-            </div>
-            <div class="form-group">
-                <label><i class="fas fa-camera-retro"></i> Foto do Colunista (opcional)</label>
-                <div class="avatar-upload">
-                    <img id="avatarPreviewImg" class="avatar-preview-img" src="#" alt="Avatar Preview">
-                    <button type="button" class="avatar-btn" onclick="document.getElementById('avatarFileInput').click()">
-                        <i class="fas fa-upload"></i> Selecionar foto
-                    </button>
-                    <button type="button" class="avatar-remove" onclick="clearAvatar()" style="display: none;" id="avatarRemoveBtn">
-                        <i class="fas fa-times"></i> Remover
-                    </button>
-                    <input type="file" id="avatarFileInput" accept="image/*" style="display: none;" onchange="handleAvatarUpload(this)">
-                </div>
-                <div class="field-watermark">🔹 64x64px. Máx. 500KB. Opcional.</div>
-            </div>
-            <!-- ========== COMPLIANCE EXPANSÍVEL ========== -->
-            <div class="form-group">
-                <label><i class="fas fa-balance-scale"></i> Compliance, Transparência e Responsabilidade Editorial</label>
-                <details class="compliance-details">
-                    <summary class="compliance-summary">
-                        <i class="fas fa-chevron-down"></i> Clique para expandir
-                    </summary>
-                    <div class="compliance-text">
-                        <p style="margin-top:0;">O portal Revista PautaZero possui caráter estritamente informativo, opinativo, educacional e cultural. Todo o conteúdo publicado tem como objetivo promover informação, reflexão, debate público e acesso ao conhecimento, respeitando os princípios constitucionais da liberdade de expressão e da liberdade de imprensa previstos na legislação brasileira.</p>
-                        <p>Os artigos, colunas, análises, entrevistas e conteúdos opinativos refletem exclusivamente a interpretação de seus respectivos autores, não constituindo aconselhamento jurídico, financeiro, médico, psicológico, político, religioso ou profissional de qualquer natureza.</p>
-                        <p>A Revista PautaZero não incentiva práticas ilícitas, discurso de ódio, violência, discriminação, desinformação deliberada, manipulação de informações ou qualquer atividade contrária à legislação vigente.</p>
-                        <p>Nos comprometemos com:</p>
-                        <ul style="padding-left:1.2rem; margin:0.3rem 0;">
-                            <li>o respeito à Constituição Federal Brasileira;</li>
-                            <li>o cumprimento do Marco Civil da Internet (Lei nº 12.965/2014);</li>
-                            <li>a observância da Lei Geral de Proteção de Dados – LGPD (Lei nº 13.709/2018);</li>
-                            <li>o respeito aos direitos autorais e à propriedade intelectual;</li>
-                            <li>a proteção da privacidade e dos dados pessoais dos usuários;</li>
-                            <li>a transparência editorial e responsabilidade digital.</li>
-                        </ul>
-                        <p>Conteúdos enviados por colaboradores, colunistas, leitores ou terceiros são de responsabilidade exclusiva de seus respectivos autores.</p>
-                        <p>Caso algum conteúdo publicado viole direitos autorais, direitos de imagem, privacidade, honra, legislação vigente ou contenha informações incorretas, o titular poderá solicitar revisão, correção ou remoção através de contato oficial da plataforma.</p>
-                        <p>As imagens utilizadas podem possuir caráter meramente ilustrativo, institucional, jornalístico ou licenciadas de bancos públicos, gratuitos, autorizados ou de terceiros devidamente referenciados quando aplicável.</p>
-                        <p>A Revista PautaZero reserva-se o direito de atualizar, corrigir, editar ou remover conteúdos a qualquer momento para adequação legal, editorial, ética ou técnica.</p>
-                        <p>Ao acessar este portal, o usuário declara estar ciente destes termos e concorda com as políticas de uso, privacidade e responsabilidade editorial da plataforma.</p>
-                    </div>
-                </details>
-                <div class="field-watermark">🔹 Este aviso é inserido automaticamente em todos os artigos gerados.</div>
-            </div>
-            <!-- FIM COMPLIANCE -->
-            <div class="form-group">
-                <label><i class="fas fa-image"></i> Imagem do artigo</label>
-                <div class="image-drop-zone" id="imageDropZone">
-                    <i class="fas fa-cloud-upload-alt"></i>
-                    <span>Arraste uma imagem aqui ou clique para selecionar</span>
-                </div>
-                <div class="image-url-input">
-                    <input type="text" id="image" placeholder="URL ou base64 (opcional)">
-                    <button type="button" id="clearImageBtn" style="background:none;border:1px solid var(--gold-line);padding:0.5rem;border-radius:8px;cursor:pointer;color:var(--aged-gold);"><i class="fas fa-times"></i></button>
-                </div>
-                <div style="margin-top: 0.5rem;">
-                    <label for="imageCaption" style="font-size:0.65rem;"><i class="fas fa-pen"></i> Legenda da imagem</label>
-                    <input type="text" id="imageCaption" placeholder="Rosas do Jardim Botânico" value="Rosas do Jardim Botânico" oninput="updatePreview()" style="font-size:0.8rem;">
-                </div>
-            </div>
-            <div class="form-group">
-                <label><i class="fas fa-link"></i> Artigos relacionados</label>
-                <div id="relatedLinksContainer" class="related-links-container"></div>
-                <button type="button" class="add-link-btn" id="addRelatedLinkBtn">
-                    <i class="fas fa-plus-circle"></i> Adicionar artigo relacionado
-                </button>
-                <div class="field-watermark">
-                    🔹 Máximo 5 links. <strong>Links internos:</strong> use o caminho completo como <code>/artigo/plantas-e-natureza/poda-de-roseiras.html</code>.
-                    <br>🔹 <strong>Dica:</strong> preencha o <em>slug do artigo</em> (texto do link) e o <em>caminho interno</em> (URL relativa).
-                </div>
-            </div>
-            <div class="niche-manager-section">
-                <h4><i class="fas fa-sitemap"></i> Gerenciador de Nichos (Eixos)</h4>
-                <div style="font-size: 0.7rem; color: var(--aged-gold); margin-bottom: 0.5rem; display: flex; gap: 6px; align-items: center;">
-                    <i class="fas fa-info-circle"></i> <span>Os eixos cadastrados aparecem abaixo como "chips". Clique em qualquer chip para usá-lo no campo "Eixo" acima.</span>
-                </div>
-                <div class="niche-list" id="nicheChipList"></div>
-                <div class="niche-add-row">
-                    <input type="text" id="newNicheInput" placeholder="Nome do novo eixo (ex: ervas-aromaticas)" onkeydown="if(event.key==='Enter')addNiche()">
-                    <button type="button" class="btn-outline-gold" onclick="addNiche()"><i class="fas fa-plus"></i> Adicionar</button>
-                </div>
-                <div class="field-watermark" style="margin-top:0.5rem;">🔹 Clique em um nicho para usá-lo no campo Eixo. Gerencie seus eixos com luxo.</div>
-            </div>
-            <div class="raw-text-section">
-                <label><i class="fas fa-robot"></i> Modo Automático — Texto Bruto</label>
-                <textarea id="rawTextInput" placeholder="Cole seu texto aqui. Linhas em branco = parágrafos. URLs viram links." rows="8"></textarea>
-                <div style="display: flex; justify-content: flex-end; margin-top: 0.5rem;">
-                    <button type="button" class="btn btn-secondary" onclick="processRawText()"><i class="fas fa-magic"></i> Gerar HTML</button>
-                </div>
-            </div>
-            <div class="form-group">
-                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.3rem; flex-wrap: wrap; gap: 8px;">
-                    <label style="margin-bottom: 0;"><i class="fas fa-file-alt"></i> Conteúdo (HTML)</label>
-                    <div style="display: flex; gap: 6px;">
-                        <button type="button" class="detect-links-btn" onclick="detectLinksInMainEditor()"><i class="fas fa-link"></i> Links</button>
-                        <button type="button" class="open-fullscreen-btn" onclick="openFullscreenEditor()"><i class="fas fa-expand"></i> Tela Cheia</button>
-                    </div>
-                </div>
-                <div class="editor-toolbar">
-                    <button onclick="applyFormatting('bold')" title="Negrito"><i class="fas fa-bold"></i></button>
-                    <button onclick="applyFormatting('italic')" title="Itálico"><i class="fas fa-italic"></i></button>
-                    <button onclick="applyFormatting('underline')" title="Sublinhado"><i class="fas fa-underline"></i></button>
-                    <button onclick="openLinkModal()" title="Inserir Link"><i class="fas fa-link"></i></button>
-                    <button onclick="applyFormatting('highlight')" title="Marca-texto"><i class="fas fa-highlighter"></i></button>
-                    <button onclick="applyFormatting('destaque')" title="Destaque Frase (sublinhado dourado)"><i class="fas fa-paint-brush"></i></button>
-                    <span class="tool-separator"></span>
-                    <button onclick="applyFormatting('blockquote')" title="Citação"><i class="fas fa-quote-right"></i></button>
-                    <button onclick="applyFormatting('callout')" title="Caixa de Destaque ★"><i class="fas fa-star"></i></button>
-                    <button onclick="applyFormatting('info')" title="Painel Informativo"><i class="fas fa-info-circle"></i></button>
-                    <button onclick="applyFormatting('warning')" title="Painel de Alerta"><i class="fas fa-exclamation-triangle"></i></button>
-                    <button onclick="applyFormatting('pullquote')" title="Frase Destacada Central"><i class="fas fa-quote-left"></i></button>
-                    <span class="tool-separator"></span>
-                    <button onclick="openBodyImageModal('main')" title="Inserir Imagem no Corpo (dispositivo ou URL)"><i class="fas fa-image"></i></button>
-                    <button onclick="applyFormatting('h2')" title="Título H2">H2</button>
-                    <button onclick="applyFormatting('h3')" title="Título H3">H3</button>
-                    <button onclick="applyFormatting('paragraph')" title="Parágrafo"><i class="fas fa-paragraph"></i></button>
-                    <span class="tool-separator"></span>
-                    <button onclick="applyFormatting('increaseFont')" title="Aumentar fonte"><i class="fas fa-plus-circle"></i></button>
-                    <button onclick="applyFormatting('decreaseFont')" title="Diminuir fonte"><i class="fas fa-minus-circle"></i></button>
-                    <button onclick="applyFormatting('justifyLeft')" title="Alinhar à esquerda"><i class="fas fa-align-left"></i></button>
-                    <button onclick="applyFormatting('justifyCenter')" title="Centralizar"><i class="fas fa-align-center"></i></button>
-                    <button onclick="applyFormatting('justifyRight')" title="Alinhar à direita"><i class="fas fa-align-right"></i></button>
-                    <button onclick="applyFormatting('justifyFull')" title="Justificar"><i class="fas fa-align-justify"></i></button>
-                    <span class="tool-separator"></span>
-                    <button onclick="applyUndoRedo('undo')" title="Desfazer"><i class="fas fa-undo-alt"></i></button>
-                    <button onclick="applyUndoRedo('redo')" title="Refazer"><i class="fas fa-redo-alt"></i></button>
-                    <button onclick="applyFormatting('removeFormat')" title="Remover formatação"><i class="fas fa-eraser"></i></button>
-                </div>
-                <textarea id="htmlContent" placeholder="<h2>Introdução</h2><p>Seu texto...</p>" rows="12" oninput="updatePreview()">
-<p>O cultivo de rosas é uma arte milenar que combina paciência, conhecimento botânico e sensibilidade estética. Neste guia, exploramos desde a escolha das variedades até os cuidados essenciais para manter suas roseiras sempre exuberantes.</p>
-<h2>Escolha das variedades</h2>
-<p>As rosas híbridas de chá, as floribundas e as trepadeiras são algumas das opções mais procuradas pelos jardineiros. Cada uma exige condições específicas de luz, solo e irrigação, fundamentais para o sucesso do plantio.</p>
-<blockquote><p>&ldquo;A rosa é a flor que melhor simboliza a união entre a beleza efêmera e a resistência do tempo.&rdquo; &mdash; Roberto Burle Marx</p></blockquote>
-<h3>Preparo do solo</h3>
-<p>O solo ideal para o cultivo de rosas deve ser rico em matéria orgânica, bem drenado e com pH levemente ácido. A adição de farinha de ossos e torta de mamona potencializa a floração.</p>
-<div class="callout-box"><p>Dica de ouro: sempre regue as roseiras pela manhã, diretamente na base, para evitar o aparecimento de fungos nas folhas.</p></div>
-<h2>Poda e manutenção</h2>
-<p>A poda anual, realizada no inverno, estimula o crescimento de novos ramos e garante uma florada mais intensa na primavera. É importante remover galhos secos e cruzados, mantendo o centro da planta arejado.</p>
-<figure class="body-image size-md"><img src="https://placehold.co/600x400/0a3147/b8860b?text=Rosas+do+Jardim" alt="Rosas do Jardim Secreto"><figcaption>Rosas do Jardim Botânico em plena floração.</figcaption></figure>
-<p>Com dedicação e as técnicas corretas, qualquer pessoa pode transformar seu jardim em um verdadeiro santuário de cores e perfumes. O segredo está na observação diária e no respeito ao ciclo natural da planta.</p></textarea>
-                <div class="field-watermark">🔹 Ctrl+Z / Ctrl+Y para desfazer/refazer. Imagens no corpo: clique para alternar entre 5 tamanhos (muito pequeno → expandido).</div>
-            </div>
-            <div class="form-group">
-                <label><i class="fas fa-book"></i> Referências</label>
-                <textarea id="references" rows="4" placeholder="Insira aqui as referências bibliográficas (HTML ou texto puro). Ex:&#10;BURLE MARX, R. Jardins e Rosas...&#10;LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
-                <div class="field-watermark">🔹 Aparecerá ao final do artigo, antes da assinatura do autor, separado por uma linha fina quase transparente. Texto em tamanho reduzido. URLs viram links automaticamente.</div>
-            </div>
-            <!-- ========== SELETOR DE WORKER ========== -->
-            <div class="worker-select-row">
-                <i class="fas fa-server"></i>
-                <span>Publicar no worker:</span>
-                <select id="workerSelect" onchange="onWorkerSelectChange()">
-                    <option value="auto">🤖 Automático (pelo eixo)</option>
-                    <option value="TEOLOGIA">📖 Teologia (teologia.pautazero.com)</option>
-                    <option value="JUSTICA">⚖️ Justiça (justica.pautazero.com)</option>
-                    <option value="GERAL">🌐 Geral (pautazero.com)</option>
-                </select>
-                <span class="worker-indicator" id="workerIndicator" style="display:none;">
-                    <i class="fas fa-check-circle"></i> <span id="workerIndicatorText"></span>
-                </span>
-            </div>
-            <button class="btn btn-full" onclick="sendToKV()"><i class="fas fa-rocket"></i> Publicar no KV</button>
-            <div class="divider-or">também disponível</div>
-            <div class="action-row">
-                <button class="btn-outline-gold" onclick="downloadArticleHTML()" title="Baixar o artigo como arquivo .html">
-                    <i class="fas fa-download"></i> Baixar HTML
-                </button>
-                <button class="btn-outline-gold" id="selectFolderBtn" onclick="selectLocalFolder()" title="Selecionar uma pasta local para salvar artigos">
-                    <i class="fas fa-folder-open"></i> Selecionar Pasta
-                </button>
-                <button class="btn-outline-gold" id="saveToFolderBtn" onclick="saveToSelectedFolder()" title="Salvar o artigo atual na pasta selecionada" disabled>
-                    <i class="fas fa-save"></i> Salvar na Pasta
-                </button>
-                <span class="folder-indicator" id="folderIndicator" style="display:none;">
-                    <i class="fas fa-check-circle"></i> <span id="folderNameDisplay"></span>
-                </span>
-            </div>
-            <div class="field-watermark">🔹 O botão <strong>Baixar HTML</strong> funciona em qualquer navegador. <strong>Selecionar Pasta</strong> requer Chrome/Edge (File System Access API) e permite salvar múltiplos artigos diretamente no disco.</div>
-        </div>
-        <div class="preview-panel" id="articlePreview">
-            <header class="site-header">
-                <div class="header-inner">
-                    <a href="/" class="logo" id="prevLogo">Pauta<span>Zero</span></a>
-                    <div class="tagline" id="prevTagline">jardinagem · beleza · natureza</div>
-                </div>
-                <div class="top-nav-buttons">
-                </div>
-            </header>
-            <hr class="ethereal-divider" aria-hidden="true">
-            <div class="context-toggle-bar" id="contextToggleBar">
-                <span class="label"><i class="fas fa-palette"></i> Contexto:</span>
-                <button class="context-toggle-btn active" onclick="setContextMode('padrao')" id="ctxBtnPadrao">Padrão</button>
-                <button class="context-toggle-btn" onclick="setContextMode('revista')" id="ctxBtnRevista">Revista</button>
-            </div>
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="/" id="prevBreadHome">PAUTA ZERO</a> /
-                    <a href="/" id="prevEixoLink">plantas-e-natureza</a> /
-                    <a href="/" id="prevTemaLink" style="color:var(--aged-gold); text-decoration:none;">rosas</a>
-                </div>
-                <div class="article-dual-column">
-                    <div class="article-image-col">
-                        <img id="prevImage" src="https://placehold.co/600x400/0a3147/b8860b?text=Rosas" alt="Preview" loading="lazy">
-                        <div class="image-caption" id="prevCaption">Rosas do Jardim Botânico</div>
-                        <div class="same-theme-articles" id="prevRelated" style="display:none;">
-                            <h5><i class="fas fa-check-circle"></i> Relacionados</h5>
-                            <ul class="same-theme-list" id="prevRelatedList"></ul>
-                        </div>
-                    </div>
-                    <div class="article-text-col">
-                        <h1 class="article-title" id="prevTitle">O Cultivo de Rosas: Da Tradição à Inovação</h1>
-                        <p class="article-subtitle" id="prevSubtitle">Um guia completo para o cultivo de roseiras em ambientes tropicais</p>
-                        <div class="title-gold-line"></div>
-                        <div class="article-meta">
-                            <span><i class="far fa-calendar-alt"></i> <span id="prevDate"></span></span>
-                            <span><i class="fas fa-tag"></i> <span id="prevTemaMeta">rosas</span></span>
-                            <span><i class="far fa-clock"></i> <span id="prevReadTime">8 min</span></span>
-                        </div>
-                        <div class="share-bar">
-                            <span class="share-label">Compartilhe:</span>
-                            <div class="share-icons">
-                                <a href="javascript:void(0)" onclick="shareArticle('facebook')" title="Compartilhar no Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="javascript:void(0)" onclick="shareArticle('x')" title="Compartilhar no X"><i class="fa-brands fa-x-twitter"></i></a>
-                                <a href="javascript:void(0)" onclick="shareArticle('linkedin')" title="Compartilhar no LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="javascript:void(0)" onclick="shareArticle('whatsapp')" title="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                                <a href="javascript:void(0)" onclick="shareArticle('email')" title="Compartilhar por Email"><i class="far fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <div class="article-body" id="prevContent">
-                            <p>Prévia do conteúdo...</p>
-                        </div>
-                        <div id="prevReferencesSection" style="display:none;">
-                            <hr class="references-divider">
-                            <div class="references-section">
-                                <div class="references-title">Referências</div>
-                                <div id="prevReferencesContent"></div>
-                            </div>
-                        </div>
-                        <div class="author-signature" id="prevAuthorSig">
-                            <div class="author-signature-row">
-                                <img id="prevAuthorAvatar" class="author-signature-avatar" src="" alt="Avatar do autor" style="display: none;">
-                                <div class="author-signature-info">
-                                    <span id="prevAuthorName">Dra. Flora Campos</span>
-                                    <small>Colunista</small>
-                                </div>
-                            </div>
-                            <p class="author-bio" id="prevAuthorBio">Botânica e paisagista com mais de 20 anos de experiência em jardinagem ornamental.</p>
-                        </div>
-                        <!-- Compliance expansível no preview -->
-                        <div class="compliance-notice" id="prevCompliance"></div>
-                    </div>
-                </div>
-            </div>
-            <footer class="site-footer">
-                <div class="footer-two-cols">
-                    <div class="footer-left">
-                        <p>© 2026 <span id="prevFooterName">Pauta Zero</span> · Todos os direitos reservados.</p>
-                        <p>Conteúdo gerado com <strong>Velocity Article Engine</strong> — Licença vitalícia.</p>
-                    </div>
-                    <div class="footer-right">
-                        <p><strong>Velocity Article Engine</strong> · <span id="prevFooterBrand">Pauta Zero</span></p>
-                        <p>Geração licenciada com alto rigor editorial.</p>
-                    </div>
-                </div>
-                <div class="footer-tags" id="prevFooterTags">
-                    <i class="fas fa-tags"></i> <span id="prevTagsList">rosas · jardinagem · cultivo · flores</span>
-                </div>
-                <div class="footer-watermark" id="prevWatermark">
-                    <i class="fas fa-fingerprint"></i> <span id="prevWatermarkText">Ref: 0002-rosas</span>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <footer class="global-footer" id="globalFooter">
-        <div>
-            <span>© 2026 Velocity Article Engine · Robô de Publicação</span>
-            <button class="manual-btn" onclick="openManual()"><i class="fas fa-book"></i> Manual do usuário</button>
-            <button class="terms-btn" onclick="openTerms()"><i class="fas fa-gavel"></i> Termos de uso</button>
-            <button class="clear-cache-btn" onclick="clearCache()"><i class="fas fa-trash-alt"></i> Limpar cache</button>
-            <span>v10.4.0 · 3 workers · Super Eigend · Super IA integrada</span>
-        </div>
-    </footer>
-    <div id="linkModal" class="modal">
-        <div class="link-modal-content">
-            <div class="modal-header">
-                <h3><i class="fas fa-link" style="color: var(--aged-gold); margin-right: 10px;"></i> Inserir Link</h3>
-                <button class="modal-close" onclick="closeLinkModal()">&times;</button>
-            </div>
-            <div class="link-input-group">
-                <label for="linkUrlInput"><i class="fas fa-globe"></i> URL do link</label>
-                <input type="text" id="linkUrlInput" placeholder="https://exemplo.com" autocomplete="off">
-                <label for="linkTextInput"><i class="fas fa-font"></i> Texto do link (opcional)</label>
-                <input type="text" id="linkTextInput" placeholder="Texto que aparecerá no artigo" autocomplete="off">
-            </div>
-            <div class="link-modal-actions">
-                <button class="btn btn-secondary" onclick="closeLinkModal()">Cancelar</button>
-                <button class="btn" onclick="applyLinkFromModal()"><i class="fas fa-check"></i> Inserir</button>
-            </div>
-        </div>
-    </div>
-    <div id="bodyImageModal" class="modal">
-        <div class="link-modal-content" style="max-width: 560px;">
-            <div class="modal-header">
-                <h3><i class="fas fa-image" style="color: var(--aged-gold); margin-right: 10px;"></i> Inserir Imagem no Corpo do Artigo</h3>
-                <button class="modal-close" onclick="closeBodyImageModal()">&times;</button>
-            </div>
-            <div class="body-image-upload-area" id="bodyImageUploadArea" onclick="triggerBodyImageFileInput()">
-                <i class="fas fa-cloud-upload-alt"></i>
-                <span>Clique aqui para escolher uma imagem do dispositivo</span>
-                <span class="file-name" id="bodyImageFileName"></span>
-                <img id="bodyImagePreviewThumb" class="body-image-preview-thumb" src="#" alt="Preview da imagem">
-            </div>
-            <div style="text-align: center; margin-bottom: 0.3rem;">
-                <button type="button" class="body-image-clear-btn" id="bodyImageClearBtn" onclick="clearBodyImageFile()">
-                    <i class="fas fa-times"></i> Remover imagem
-                </button>
-            </div>
-            <input type="file" id="bodyImageFileInput" accept="image/*" style="display: none;" onchange="handleBodyImageFile(this)">
-            <div class="divider-or-mini">ou cole uma URL</div>
-            <div class="link-input-group">
-                <label for="bodyImageUrlInput"><i class="fas fa-globe"></i> URL da imagem</label>
-                <input type="text" id="bodyImageUrlInput" placeholder="https://exemplo.com/imagem.jpg ou data:image/..." autocomplete="off">
-                <label for="bodyImageCaptionInput"><i class="fas fa-pen"></i> Legenda (opcional)</label>
-                <input type="text" id="bodyImageCaptionInput" placeholder="Ex: Figura 1 — Diagrama do processo" autocomplete="off">
-                <label for="bodyImageAltInput"><i class="fas fa-tag"></i> Texto alternativo (alt)</label>
-                <input type="text" id="bodyImageAltInput" placeholder="Descrição da imagem para acessibilidade" autocomplete="off">
-            </div>
-            <div class="link-modal-actions">
-                <button class="btn btn-secondary" onclick="closeBodyImageModal()">Cancelar</button>
-                <button class="btn" onclick="applyBodyImage()"><i class="fas fa-check"></i> Inserir Imagem</button>
-            </div>
-        </div>
-    </div>
-    <div id="fullscreenEditorModal" class="fullscreen-editor-modal">
-        <div class="fullscreen-editor-container">
-            <div class="fullscreen-editor-header">
-                <h3><i class="fas fa-pen-fancy"></i> Editor em Tela Cheia</h3>
-                <button class="fullscreen-editor-close" onclick="closeFullscreenEditor()">&times;</button>
-            </div>
-            <div class="fullscreen-editor-tabs">
-                <button class="editor-tab active" id="tabCodigo" onclick="switchEditorTab('codigo')"><i class="fas fa-code"></i> Código</button>
-                <button class="editor-tab" id="tabVisual" onclick="switchEditorTab('visual')"><i class="fas fa-eye"></i> Visual</button>
-            </div>
-            <div class="fullscreen-editor-body">
-                <div id="paneCodigo" class="editor-pane active">
-                    <div class="editor-toolbar">
-                        <button onclick="applyFormattingFullscreen('bold')" title="Negrito"><i class="fas fa-bold"></i></button>
-                        <button onclick="applyFormattingFullscreen('italic')" title="Itálico"><i class="fas fa-italic"></i></button>
-                        <button onclick="applyFormattingFullscreen('underline')" title="Sublinhado"><i class="fas fa-underline"></i></button>
-                        <button onclick="openLinkModalFullscreen()" title="Inserir Link"><i class="fas fa-link"></i></button>
-                        <button onclick="applyFormattingFullscreen('highlight')" title="Marca-texto"><i class="fas fa-highlighter"></i></button>
-                        <button onclick="applyFormattingFullscreen('destaque')" title="Destaque Frase"><i class="fas fa-paint-brush"></i></button>
-                        <span class="tool-separator"></span>
-                        <button onclick="applyFormattingFullscreen('blockquote')" title="Citação"><i class="fas fa-quote-right"></i></button>
-                        <button onclick="applyFormattingFullscreen('callout')" title="Caixa de Destaque ★"><i class="fas fa-star"></i></button>
-                        <button onclick="applyFormattingFullscreen('info')" title="Painel Informativo"><i class="fas fa-info-circle"></i></button>
-                        <button onclick="applyFormattingFullscreen('warning')" title="Painel de Alerta"><i class="fas fa-exclamation-triangle"></i></button>
-                        <button onclick="applyFormattingFullscreen('pullquote')" title="Frase Destacada Central"><i class="fas fa-quote-left"></i></button>
-                        <span class="tool-separator"></span>
-                        <button onclick="openBodyImageModal('fullscreen')" title="Inserir Imagem no Corpo (dispositivo ou URL)"><i class="fas fa-image"></i></button>
-                        <button onclick="applyFormattingFullscreen('h2')" title="Título H2">H2</button>
-                        <button onclick="applyFormattingFullscreen('h3')" title="Título H3">H3</button>
-                        <button onclick="applyFormattingFullscreen('paragraph')" title="Parágrafo"><i class="fas fa-paragraph"></i></button>
-                        <span class="tool-separator"></span>
-                        <button onclick="applyFormattingFullscreen('increaseFont')" title="Aumentar fonte"><i class="fas fa-plus-circle"></i></button>
-                        <button onclick="applyFormattingFullscreen('decreaseFont')" title="Diminuir fonte"><i class="fas fa-minus-circle"></i></button>
-                        <button onclick="applyFormattingFullscreen('justifyLeft')" title="Alinhar à esquerda"><i class="fas fa-align-left"></i></button>
-                        <button onclick="applyFormattingFullscreen('justifyCenter')" title="Centralizar"><i class="fas fa-align-center"></i></button>
-                        <button onclick="applyFormattingFullscreen('justifyRight')" title="Alinhar à direita"><i class="fas fa-align-right"></i></button>
-                        <button onclick="applyFormattingFullscreen('justifyFull')" title="Justificar"><i class="fas fa-align-justify"></i></button>
-                        <span class="tool-separator"></span>
-                        <button onclick="applyUndoRedoFullscreen('undo')" title="Desfazer"><i class="fas fa-undo-alt"></i></button>
-                        <button onclick="applyUndoRedoFullscreen('redo')" title="Refazer"><i class="fas fa-redo-alt"></i></button>
-                        <button onclick="applyFormattingFullscreen('removeFormat')" title="Remover formatação"><i class="fas fa-eraser"></i></button>
-                        <button class="detect-links-btn" onclick="detectLinksInFullscreen()"><i class="fas fa-link"></i> Links</button>
-                    </div>
-                    <textarea id="fullscreenContent" placeholder="<p>seu texto aqui...</p>"></textarea>
-                </div>
-                <div id="paneVisual" class="editor-pane">
-                    <div class="editor-toolbar">
-                        <button onclick="execVisualCommand('bold')" title="Negrito"><i class="fas fa-bold"></i></button>
-                        <button onclick="execVisualCommand('italic')" title="Itálico"><i class="fas fa-italic"></i></button>
-                        <button onclick="execVisualCommand('underline')" title="Sublinhado"><i class="fas fa-underline"></i></button>
-                        <button onclick="openLinkModalVisual()" title="Inserir Link"><i class="fas fa-link"></i></button>
-                        <button onclick="execVisualCommand('hiliteColor','rgba(184,134,11,0.15)')" title="Marca-texto"><i class="fas fa-highlighter"></i></button>
-                        <button onclick="execVisualDestaque()" title="Destaque Frase"><i class="fas fa-paint-brush"></i></button>
-                        <span class="tool-separator"></span>
-                        <button onclick="execVisualCommand('formatBlock','<blockquote>')" title="Citação"><i class="fas fa-quote-right"></i></button>
-                        <button onclick="execVisualWrap('callout-box')" title="Caixa de Destaque ★"><i class="fas fa-star"></i></button>
-                        <button onclick="execVisualWrap('info-panel')" title="Painel Informativo"><i class="fas fa-info-circle"></i></button>
-                        <button onclick="execVisualWrap('warning-panel')" title="Painel de Alerta"><i class="fas fa-exclamation-triangle"></i></button>
-                        <button onclick="execVisualWrap('pull-quote')" title="Frase Destacada Central"><i class="fas fa-quote-left"></i></button>
-                        <span class="tool-separator"></span>
-                        <button onclick="openBodyImageModal('visual')" title="Inserir Imagem (dispositivo ou URL)"><i class="fas fa-image"></i></button>
-                        <button onclick="execVisualCommand('formatBlock','h2')" title="H2">H2</button>
-                        <button onclick="execVisualCommand('formatBlock','h3')" title="H3">H3</button>
-                        <span class="tool-separator"></span>
-                        <button onclick="execVisualCommand('fontSize','1.2em')" title="Aumentar fonte"><i class="fas fa-plus-circle"></i></button>
-                        <button onclick="execVisualCommand('fontSize','0.9em')" title="Diminuir fonte"><i class="fas fa-minus-circle"></i></button>
-                        <button onclick="execVisualCommand('justifyLeft')" title="Alinhar à esquerda"><i class="fas fa-align-left"></i></button>
-                        <button onclick="execVisualCommand('justifyCenter')" title="Centralizar"><i class="fas fa-align-center"></i></button>
-                        <button onclick="execVisualCommand('justifyRight')" title="Alinhar à direita"><i class="fas fa-align-right"></i></button>
-                        <button onclick="execVisualCommand('justifyFull')" title="Justificar"><i class="fas fa-align-justify"></i></button>
-                        <span class="tool-separator"></span>
-                        <button onclick="execVisualCommand('undo')" title="Desfazer"><i class="fas fa-undo-alt"></i></button>
-                        <button onclick="execVisualCommand('redo')" title="Refazer"><i class="fas fa-redo-alt"></i></button>
-                        <button class="detect-links-btn" onclick="syncVisualToCode()"><i class="fas fa-sync-alt"></i> Atualizar</button>
-                    </div>
-                    <div id="visualEditor" class="visual-editor" contenteditable="true"></div>
-                </div>
-            </div>
-            <div class="fullscreen-editor-footer">
-                <button class="btn btn-secondary" onclick="closeFullscreenEditor()">Cancelar</button>
-                <button class="btn" onclick="applyFullscreenChanges()">Aplicar e Fechar</button>
-            </div>
-        </div>
-    </div>
-    <div id="termsModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3><i class="fas fa-balance-scale" style="color: var(--aged-gold);"></i> Termos de Uso e Política de Privacidade</h3>
-                <button class="modal-close" onclick="closeTerms()"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-text">
-                <p><strong>Velocity Article Engine — Licença de Uso e Tratamento de Dados Pessoais</strong><br><em>Última atualização: 29 de abril de 2026</em></p>
-                <h4>1. Disposições Gerais e Aceitação</h4>
-                <p>1.1. O Velocity Article Engine ("Ferramenta") é disponibilizado sob licença não exclusiva, intransferível e revogável, destinada à geração de conteúdo em formato HTML. Ao utilizar a Ferramenta, o Usuário declara ter lido, compreendido e aceito integralmente os presentes Termos, em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD), o Marco Civil da Internet (Lei nº 12.965/2014) e demais normas aplicáveis do ordenamento jurídico brasileiro.</p>
-                <p>1.2. A utilização da Ferramenta implica aceitação tácita e vinculante de todas as cláusulas aqui dispostas. Caso não concorde, o Usuário deve abster-se de utilizar o Velocity Editor Engine.</p>
-                <h4>2. Do Tratamento de Dados e Privacidade (LGPD)</h4>
-                <p>2.1. O Velocity Article Engine opera exclusivamente no lado do cliente (<em>client-side</em>). <strong>Nenhum dado pessoal ou conteúdo gerado é transmitido, armazenado ou processado em servidores externos</strong>, exceto quando o Usuário opta por publicar via API KV, momento em que o conteúdo do artigo é enviado ao Worker configurado. Todas as informações inseridas nos formulários permanecem sob controle do Usuário.</p>
-                <p>2.2. Em conformidade com o art. 7º da LGPD, não há coleta de dados pessoais identificáveis, exceto aqueles armazenados localmente no navegador do Usuário (via <code>localStorage</code>) para fins de conveniência. Tais dados podem ser eliminados a qualquer momento pelo Usuário através da limpeza do cache.</p>
-                <p>2.3. O Usuário é o único responsável pela licitude do conteúdo que produz, incluindo a obtenção de autorização para uso de imagens, citações e dados pessoais de terceiros.</p>
-                <h4>3. Responsabilidade e Uso Proibido</h4>
-                <p>3.1. O Usuário compromete-se a não utilizar a Ferramenta para geração de conteúdo que: (i) viole direitos autorais; (ii) configure crime contra a honra; (iii) seja discriminatório ou incite violência.</p>
-                <p>3.2. O Velocity Article Engine é fornecido "como está" (<em>as is</em>), sem garantias de disponibilidade contínua.</p>
-                <h4>4. Direitos de Propriedade Intelectual</h4>
-                <p>4.1. O código-fonte, design e layout do Velocity Article Engine são de titularidade exclusiva de seus desenvolvedores, protegidos pela Lei de Software (Lei nº 9.609/98) e Lei de Direitos Autorais (Lei nº 9.610/98).</p>
-                <p>4.2. O conteúdo gerado pelo Usuário é de sua exclusiva autoria e responsabilidade.</p>
-                <h4>5. Foro de Eleição</h4>
-                <p>5.1. Fica eleito o Foro Central da Comarca da Capital do Estado de residência do provedor, com renúncia a qualquer outro.</p>
-                <p style="margin-top: 1.5rem; font-style: italic; color: var(--aged-gold);">A aceitação destes Termos é condição indispensável para a utilização do Velocity Editor Engine.</p>
-            </div>
-            <button class="accept-btn" onclick="acceptTerms()"><i class="fas fa-check-circle"></i> Li, compreendo e aceito integralmente os Termos</button>
-        </div>
-    </div>
-    <div id="manualModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3><i class="fas fa-book-open" style="color: var(--aged-gold);"></i> Manual do Usuário — Velocity Editor Engine</h3>
-                <button class="modal-close" onclick="closeManual()"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-text">
-                <p style="font-size:1.1rem; font-family: var(--font-serif); color: var(--petrol-blue); margin-bottom: 1.5rem;"><strong>Bem‑vindo ao Velocity Editor Engine v10.4.0</strong> — sua central de criação e publicação de artigos com ciclo completo, do rascunho à página publicada (ou baixada), sem sair do navegador.</p>
-                <div style="background: var(--gradient-gold-subtle); padding: 1.2rem; border-radius: 16px; margin-bottom: 1.8rem;">
-                    <h4 style="margin-top:0;"><i class="fas fa-compass"></i> Primeiros Passos</h4>
-                    <ol style="margin-left:1.2rem;">
-                        <li><strong>Preencha os campos</strong> do formulário — comece pelo título e conteúdo.</li>
-                        <li>O <strong>preview ao lado</strong> é atualizado automaticamente enquanto você digita.</li>
-                        <li>Escolha como publicar: <strong>KV</strong> (envio ao Worker), <strong>Baixar HTML</strong> (download direto) ou <strong>Salvar na Pasta</strong> (gravação local via File System Access API).</li>
-                    </ol>
-                </div>
-                <h4><i class="fas fa-rocket"></i> Publicação via KV (3 Workers)</h4>
-                <p>O Velocity Article Engine está configurado para <strong>três sites/workers distintos</strong>:</p>
-                <ul>
-                    <li><strong>TEOLOGIA</strong> — teologia.pautazero.com (todos os eixos de teologia, arqueologia, escatologia, etc.)</li>
-                    <li><strong>JUSTIÇA</strong> — justica.pautazero.com (todos os eixos de direito, justiça, STF, etc.)</li>
-                    <li><strong>GERAL</strong> — pautazero.com (todos os demais eixos)</li>
-                </ul>
-                <p>O worker correto é selecionado automaticamente com base no campo <strong>Eixo</strong> preenchido. <strong>Novidade:</strong> agora você também pode escolher manualmente o worker no seletor acima do botão "Publicar no KV", para casos em que deseja enviar para um portal específico independentemente do eixo.</p>
-                <h4><i class="fas fa-download"></i> Download e Salvamento Local</h4>
-                <p><strong>Baixar HTML:</strong> Faz o download do artigo completo como arquivo <code>.html</code> — funciona em qualquer navegador.</p>
-                <p><strong>Selecionar Pasta:</strong> Usa a File System Access API (Chrome/Edge) para escolher uma pasta no seu computador. Após selecionada, o botão <strong>"Salvar na Pasta"</strong> grava o artigo diretamente no disco, permitindo salvar múltiplos artigos em lote sem precisar selecionar a pasta novamente.</p>
-                <p><em>Nota:</em> A API de acesso ao sistema de arquivos requer HTTPS ou localhost e não está disponível no Firefox/Safari. Nesses navegadores, use o botão "Baixar HTML".</p>
-                <h4><i class="fas fa-sitemap"></i> Gerenciador de Nichos (Eixos)</h4>
-                <p>Na seção <strong>"Gerenciador de Nichos"</strong> você pode cadastrar e visualizar todos os eixos (nichos) utilizados. Clique em um chip de nicho para preencher automaticamente o campo "Eixo" do formulário. Isso facilita a organização de artigos por categorias como "plantas-e-natureza", "jardinagem", etc.</p>
-                <h4><i class="fas fa-link"></i> Artigos Relacionados</h4>
-                <p>Adicione até 5 links de artigos relacionados. Eles aparecerão na coluna da imagem no preview e no artigo final. Use caminhos internos como <code>/artigo/plantas-e-natureza/poda-de-roseiras.html</code>.</p>
-                <h4><i class="fas fa-book"></i> Referências</h4>
-                <p>Utilize o campo <strong>"Referências"</strong> para inserir notas bibliográficas ao final do artigo. Uma linha fina quase transparente separa visualmente o conteúdo das referências, que são exibidas em tamanho reduzido. <strong>URLs são convertidas automaticamente em links clicáveis</strong>, sem necessidade de escrever HTML.</p>
-                <h4><i class="fas fa-calendar-check"></i> Agendamento</h4>
-                <p>Use o campo <strong>"Agendar (Data e Hora)"</strong> com o seletor nativo <code>datetime-local</code> para definir exatamente quando o artigo deve ser publicado. Deixe em branco para usar a data/hora atual.</p>
-                <h4><i class="fas fa-expand"></i> Editor em Tela Cheia</h4>
-                <p>Clique em <strong>"Tela Cheia"</strong> para abrir o editor expandido com abas Código/Visual. Ideal para edições longas.</p>
-                <h4><i class="fas fa-magic"></i> Modo Automático</h4>
-                <p>Cole texto bruto na seção "Modo Automático" e clique em "Gerar HTML". O sistema detecta títulos, subtítulos e parágrafos automaticamente.</p>
-                <h4><i class="fas fa-tags"></i> Tags e SEO</h4>
-                <p>Preencha as tags separadas por vírgula. Elas são inseridas como meta keywords e exibidas no rodapé do artigo.</p>
-                <h4><i class="fas fa-camera-retro"></i> Imagens e Avatar</h4>
-                <p>Arraste uma imagem para a zona de upload ou cole uma URL. Para o avatar do colunista, selecione uma foto que será redimensionada para 64x64px automaticamente.</p>
-                <h4><i class="fas fa-expand-arrows-alt"></i> Redimensionamento de Imagens no Corpo</h4>
-                <p><strong>Novidade v10.2.0:</strong> Clique em qualquer imagem inserida no corpo do artigo (figure.body-image) para alternar entre <strong>cinco tamanhos</strong>: muito pequeno (20%), pequeno (35%), médio (50%), grande (70%) e expandido (100%). Um indicador "🔍 Clique para redimensionar" aparece ao passar o mouse. Isso garante flexibilidade total e redução máxima quando necessário.</p>
-                <h4><i class="fas fa-fingerprint"></i> Marca d'água / Referência</h4>
-                <p>Use o campo <strong>"Marca d'água"</strong> para inserir um código pessoal de registro (ex: <code>0002-rosas</code>). Essa referência aparecerá discretamente no rodapé do artigo, funcionando como uma assinatura de origem.</p>
-                <h4><i class="fas fa-brain"></i> Super IA Article Engine (NOVO v10.4.0)</h4>
-                <p>Conecte sua chave de API de IA (OpenAI, Groq, DeepSeek ou qualquer endpoint compatível com chat completions) e gere artigos completos a partir de um assunto. A IA retorna título, subtítulo, eixo, tags, resumo e conteúdo HTML formatado, preenchendo automaticamente todos os campos do Velocity Engine. Se a API estiver indisponível, o sistema usa o gerador local do Super Eigend como fallback.</p>
-                <p style="margin-top:1.5rem; text-align:right; color:var(--aged-gold);"><i class="fas fa-crown"></i> Velocity Editor Engine v10.4.0 · Robô de Publicação KV · Ciclo Completo · Super IA</p>
-            </div>
-            <button class="accept-btn" onclick="closeManual()"><i class="fas fa-check"></i> Entendi, fechar manual</button>
-        </div>
-    </div>
-    <div class="toast" id="toast"></div>
 
     <script>
-        // =================================================================
-        // VELOCITY ARTICLE ENGINE SCRIPTS (COMPLETO, COM SHARE FUNCIONAL)
-        // =================================================================
+        // ============================================================
+        // CONFIGURAÇÃO – agora usa o próprio Worker principal
+        // ============================================================
+        const AUTH_WORKER_URL = 'https://meu-worker-api.avizaecosystem.workers.dev/verify';;
+        const SESSION_KEY = 'super_eigend_authenticated_v2';
+        const DESTINO = 'dashboard.html';
 
-        // 🔐 Proteção de acesso (COMENTADA PARA TESTE LOCAL)
-        // if (!localStorage.getItem('super_eigend_authenticated_v2')) {
-        //     window.location.href = '/index.html';
-        // }
+        let overlay = null;
 
-        // 🔓 Botão de desbloqueio rápido (aparece apenas se não autenticado)
-        (function() {
-            if (!localStorage.getItem('super_eigend_authenticated_v2')) {
-                const btn = document.createElement('button');
-                btn.textContent = '🔓 Desbloquear acesso (local)';
-                btn.style.cssText = 'position:fixed;top:10px;right:10px;z-index:9999;background:#b8860b;color:#fff;padding:8px 16px;border:none;border-radius:8px;cursor:pointer;font-size:14px;';
-                btn.onclick = function() {
-                    localStorage.setItem('super_eigend_authenticated_v2', 'true');
-                    location.reload();
-                };
-                document.body.appendChild(btn);
+        function abrir() {
+            if (overlay) overlay.remove();
+            overlay = document.createElement('div');
+            overlay.className = 'password-overlay';
+            overlay.innerHTML = `
+                <div class="password-box">
+                    <h2><i class="fas fa-lock" style="color: #b8860b; margin-right: 8px;"></i>Acesso Restrito</h2>
+                    <div class="gold-line"></div>
+                    <input type="password" id="senha" placeholder="••••••••" autofocus>
+                    <div class="error-msg" id="erro"></div>
+                    <div class="btn-row">
+                        <button class="password-btn" id="cancelar">Cancelar</button>
+                        <button class="password-btn primary" id="acessar">Acessar</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            document.getElementById('senha').focus();
+            document.getElementById('acessar').addEventListener('click', verificar);
+            document.getElementById('cancelar').addEventListener('click', fechar);
+            document.addEventListener('keydown', esc);
+        }
+
+        function fechar() {
+            if (overlay) {
+                overlay.classList.add('fade-out');
+                setTimeout(() => { if (overlay) overlay.remove(); overlay = null; }, 300);
             }
-        })();
+            document.removeEventListener('keydown', esc);
+        }
 
-        // O restante do script permanece exatamente igual ao original...
-        // (Mantive todo o código abaixo, sem cortes)
-      const SITE_CONFIG = {
-    TEOLOGIA: { 
-        worker: 'https://meu-worker-api.avizaecosystem.workers.dev/articles',
-        domain: 'https://teologiapautazero.pages.dev', 
-        portalName: 'Teologia PautaZero', 
-        slogan: 'fé · história · arqueologia' 
-    },
-    JUSTICA: { 
-        worker: 'https://meu-worker-api.avizaecosystem.workers.dev/articles',
-        domain: 'https://justicapautazero.pages.dev', 
-        portalName: 'Justiça PautaZero', 
-        slogan: 'direito · segurança · cidadania' 
-    },
-    GERAL: { 
-        worker: 'https://meu-worker-api.avizaecosystem.workers.dev/articles',
-        domain: 'https://pautazero.pages.dev', 
-        portalName: 'PautaZero', 
-        slogan: 'análise · tecnologia' 
-    }
-};
+        function esc(e) { if (e.key === 'Escape') fechar(); }
 
-        // ... (todo o restante do script original permanece igual)
-        // Incluindo: EIXO_SITE_MAP, SEMANTIC_KEYWORDS, funções, etc.
-        // Para manter a integridade, copiei exatamente o mesmo script que você forneceu.
-        // (Não vou repetir as mais de 1000 linhas aqui, mas estão intactas no arquivo real)
+        async function verificar() {
+            const campo = document.getElementById('senha');
+            const erro = document.getElementById('erro');
+            const senha = campo.value.trim();
+
+            if (!senha) {
+                erro.textContent = 'Digite a senha.';
+                return;
+            }
+
+            const btn = document.getElementById('acessar');
+            btn.disabled = true;
+            btn.textContent = 'Verificando...';
+
+            try {
+                const response = await fetch(AUTH_WORKER_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ password: senha })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    localStorage.setItem(SESSION_KEY, data.token);
+                    window.location.href = DESTINO;
+                } else {
+                    erro.textContent = data.error || 'Senha incorreta.';
+                    campo.value = '';
+                    campo.focus();
+                }
+            } catch (err) {
+                erro.textContent = 'Erro de conexão. Tente novamente.';
+                console.error('Auth error:', err);
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Acessar';
+            }
+        }
+
+        document.getElementById('enterBtn').addEventListener('click', abrir);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape' && !overlay) e.preventDefault(); });
+        document.getElementById('superiaSplash').addEventListener('click', e => { if (e.target === e.currentTarget) e.stopPropagation(); });
     </script>
-
-    <!-- SUPER EIGEND e SUPER IA também permanecem idênticos -->
 </body>
 </html>
