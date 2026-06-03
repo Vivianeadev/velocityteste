@@ -600,36 +600,56 @@
     </div>
     <div class="toast" id="toast"></div>
 
-    <script>
-        // =================================================================
-        // VELOCITY ARTICLE ENGINE SCRIPTS (COMPLETO, COM SHARE FUNCIONAL)
-        // =================================================================
+   <script>
+    // =================================================================
+    // VELOCITY ARTICLE ENGINE SCRIPTS (COMPLETO, COM SHARE FUNCIONAL)
+    // =================================================================
 
-        // 🔐 Proteção de acesso
+    // 🔐 Proteção de acesso — DESATIVADA (COMENTADA) PARA TESTE LOCAL
+    // if (!localStorage.getItem('super_eigend_authenticated_v2')) {
+    //     window.location.href = '/index.html';
+    // }
+
+    // 🔓 Botão de desbloqueio rápido (aparece apenas se não autenticado)
+    (function() {
         if (!localStorage.getItem('super_eigend_authenticated_v2')) {
-            window.location.href = '/index.html';
+            const btn = document.createElement('button');
+            btn.textContent = '🔓 Desbloquear acesso (local)';
+            btn.style.cssText = 'position:fixed;top:10px;right:10px;z-index:9999;background:#b8860b;color:#fff;padding:8px 16px;border:none;border-radius:8px;cursor:pointer;font-size:14px;';
+            btn.onclick = function() {
+                localStorage.setItem('super_eigend_authenticated_v2', 'true');
+                location.reload();
+            };
+            document.body.appendChild(btn);
         }
+    })();
 
-      const SITE_CONFIG = {
-    TEOLOGIA: { 
-        worker: 'https://meu-worker-api.avizaecosystem.workers.dev/articles',
-        domain: 'https://teologiapautazero.pages.dev', 
-        portalName: 'Teologia PautaZero', 
-        slogan: 'fé · história · arqueologia' 
-    },
-    JUSTICA: { 
-        worker: 'https://meu-worker-api.avizaecosystem.workers.dev/articles',
-        domain: 'https://justicapautazero.pages.dev', 
-        portalName: 'Justiça PautaZero', 
-        slogan: 'direito · segurança · cidadania' 
-    },
-    GERAL: { 
-        worker: 'https://meu-worker-api.avizaecosystem.workers.dev/articles',
-        domain: 'https://pautazero.pages.dev', 
-        portalName: 'PautaZero', 
-        slogan: 'análise · tecnologia' 
-    }
-};
+    // ⚙️ CONFIGURAÇÃO DOS WORKERS
+    const SITE_CONFIG = {
+        TEOLOGIA: { 
+            worker: 'https://meu-worker-api.avizaecosystem.workers.dev/articles',
+            domain: 'https://teologiapautazero.pages.dev', 
+            portalName: 'Teologia PautaZero', 
+            slogan: 'fé · história · arqueologia' 
+        },
+        JUSTICA: { 
+            worker: 'https://meu-worker-api.avizaecosystem.workers.dev/articles',
+            domain: 'https://justicapautazero.pages.dev', 
+            portalName: 'Justiça PautaZero', 
+            slogan: 'direito · segurança · cidadania' 
+        },
+        GERAL: { 
+            worker: 'https://meu-worker-api.avizaecosystem.workers.dev/articles',
+            domain: 'https://pautazero.pages.dev', 
+            portalName: 'PautaZero', 
+            slogan: 'análise · tecnologia' 
+        }
+    };
+
+    // ⚠️ A partir daqui, CONTINUA exatamente o seu script original,
+    // com todas as funções (updatePreview, sendToKV, etc.).
+    // Se estiver faltando, o artigo não será gerado.
+</script>
 
         const EIXO_SITE_MAP = {
             'teologia': 'TEOLOGIA', 'arqueologia-biblica': 'TEOLOGIA', 'arqueologia': 'TEOLOGIA',
