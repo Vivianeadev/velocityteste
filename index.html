@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)https://velocityarticle.pages.dev/dashboard -->
-<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Velocity Article Engine · Super Eigend · Super IA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Cinzel:wght@400;500;600;700&family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    </head>
+</head>
 <body>
     <!-- ========== CABEÇALHO PAUTAZERO (HOME) + LINK RETORNAR AO INÍCIO (CANTO ESQUERDO, DISCRETO) ========== -->
     <header class="pz-header">
@@ -49,7 +52,7 @@
                 <div class="form-group">
                     <label><i class="fas fa-layer-group"></i> Eixo <span style="font-weight: normal; font-size: 0.65rem; color: var(--aged-gold);">(os eixos salvos aparecem no gerenciador abaixo e no datalist)</span></label>
                     <input type="text" id="eixo" placeholder="plantas-e-natureza" value="plantas-e-natureza" oninput="updatePreview()" list="eixosSuggest">
-                    <datalist id="eixosSuggest"><option value="plantas-e-natureza"></option><option value="Teste"></option><option value="Notícias"></option><option value="Medicina"></option><option value="coragem"></option><option value="Teologia"></option><option value="Direito"></option><option value="Plantas"></option></datalist>
+                    <datalist id="eixosSuggest"></datalist>
                     <div class="field-watermark">🔹 Se o eixo já existir, o novo tema será agrupado automaticamente.</div>
                 </div>
                 <div class="form-group">
@@ -99,8 +102,8 @@
             <div class="form-group">
                 <label><i class="fas fa-camera-retro"></i> Foto do Colunista (opcional)</label>
                 <div class="avatar-upload">
-                    <img id="avatarPreviewImg" class="avatar-preview-img" src="./Velocity Article Engine · Super Eigend · Super IA_files/dashboard" alt="Avatar Preview">
-                    <button type="button" class="avatar-btn" onclick="document.getElementById(&#39;avatarFileInput&#39;).click()">
+                    <img id="avatarPreviewImg" class="avatar-preview-img" src="#" alt="Avatar Preview">
+                    <button type="button" class="avatar-btn" onclick="document.getElementById('avatarFileInput').click()">
                         <i class="fas fa-upload"></i> Selecionar foto
                     </button>
                     <button type="button" class="avatar-remove" onclick="clearAvatar()" style="display: none;" id="avatarRemoveBtn">
@@ -157,7 +160,7 @@
             </div>
             <div class="form-group">
                 <label><i class="fas fa-link"></i> Artigos relacionados</label>
-                <div id="relatedLinksContainer" class="related-links-container"><div class="link-item" id="link-item-0"><input type="text" placeholder="Slug (texto do link)" value="poda-de-roseiras" class="link-title-input"><input type="text" placeholder="Caminho interno: /artigo/eixo/slug.html" value="/artigo/plantas-e-natureza/poda-de-roseiras.html" class="link-url-input"><button type="button" class="remove-link-btn"><i class="fas fa-trash-alt"></i></button></div><div class="link-item" id="link-item-1"><input type="text" placeholder="Slug (texto do link)" value="adubacao-organica" class="link-title-input"><input type="text" placeholder="Caminho interno: /artigo/eixo/slug.html" value="/artigo/plantas-e-natureza/adubacao-organica.html" class="link-url-input"><button type="button" class="remove-link-btn"><i class="fas fa-trash-alt"></i></button></div></div>
+                <div id="relatedLinksContainer" class="related-links-container"></div>
                 <button type="button" class="add-link-btn" id="addRelatedLinkBtn">
                     <i class="fas fa-plus-circle"></i> Adicionar artigo relacionado
                 </button>
@@ -171,9 +174,9 @@
                 <div style="font-size: 0.7rem; color: var(--aged-gold); margin-bottom: 0.5rem; display: flex; gap: 6px; align-items: center;">
                     <i class="fas fa-info-circle"></i> <span>Os eixos cadastrados aparecem abaixo como "chips". Clique em qualquer chip para usá-lo no campo "Eixo" acima.</span>
                 </div>
-                <div class="niche-list" id="nicheChipList"><span class="niche-chip" onclick="selectNiche(&#39;plantas-e-natureza&#39;)">plantas-e-natureza<span class="remove-niche" onclick="event.stopPropagation();removeNiche(0)"><i class="fas fa-times-circle"></i></span></span><span class="niche-chip" onclick="selectNiche(&#39;Teste&#39;)">Teste<span class="remove-niche" onclick="event.stopPropagation();removeNiche(1)"><i class="fas fa-times-circle"></i></span></span><span class="niche-chip" onclick="selectNiche(&#39;Notícias&#39;)">Notícias<span class="remove-niche" onclick="event.stopPropagation();removeNiche(2)"><i class="fas fa-times-circle"></i></span></span><span class="niche-chip" onclick="selectNiche(&#39;Medicina&#39;)">Medicina<span class="remove-niche" onclick="event.stopPropagation();removeNiche(3)"><i class="fas fa-times-circle"></i></span></span><span class="niche-chip" onclick="selectNiche(&#39;coragem&#39;)">coragem<span class="remove-niche" onclick="event.stopPropagation();removeNiche(4)"><i class="fas fa-times-circle"></i></span></span><span class="niche-chip" onclick="selectNiche(&#39;Teologia&#39;)">Teologia<span class="remove-niche" onclick="event.stopPropagation();removeNiche(5)"><i class="fas fa-times-circle"></i></span></span><span class="niche-chip" onclick="selectNiche(&#39;Direito&#39;)">Direito<span class="remove-niche" onclick="event.stopPropagation();removeNiche(6)"><i class="fas fa-times-circle"></i></span></span><span class="niche-chip" onclick="selectNiche(&#39;Plantas&#39;)">Plantas<span class="remove-niche" onclick="event.stopPropagation();removeNiche(7)"><i class="fas fa-times-circle"></i></span></span></div>
+                <div class="niche-list" id="nicheChipList"></div>
                 <div class="niche-add-row">
-                    <input type="text" id="newNicheInput" placeholder="Nome do novo eixo (ex: ervas-aromaticas)" onkeydown="if(event.key===&#39;Enter&#39;)addNiche()">
+                    <input type="text" id="newNicheInput" placeholder="Nome do novo eixo (ex: ervas-aromaticas)" onkeydown="if(event.key==='Enter')addNiche()">
                     <button type="button" class="btn-outline-gold" onclick="addNiche()"><i class="fas fa-plus"></i> Adicionar</button>
                 </div>
                 <div class="field-watermark" style="margin-top:0.5rem;">🔹 Clique em um nicho para usá-lo no campo Eixo. Gerencie seus eixos com luxo.</div>
@@ -194,53 +197,52 @@
                     </div>
                 </div>
                 <div class="editor-toolbar">
-                    <button onclick="applyFormatting(&#39;bold&#39;)" title="Negrito"><i class="fas fa-bold"></i></button>
-                    <button onclick="applyFormatting(&#39;italic&#39;)" title="Itálico"><i class="fas fa-italic"></i></button>
-                    <button onclick="applyFormatting(&#39;underline&#39;)" title="Sublinhado"><i class="fas fa-underline"></i></button>
+                    <button onclick="applyFormatting('bold')" title="Negrito"><i class="fas fa-bold"></i></button>
+                    <button onclick="applyFormatting('italic')" title="Itálico"><i class="fas fa-italic"></i></button>
+                    <button onclick="applyFormatting('underline')" title="Sublinhado"><i class="fas fa-underline"></i></button>
                     <button onclick="openLinkModal()" title="Inserir Link"><i class="fas fa-link"></i></button>
-                    <button onclick="applyFormatting(&#39;highlight&#39;)" title="Marca-texto"><i class="fas fa-highlighter"></i></button>
-                    <button onclick="applyFormatting(&#39;destaque&#39;)" title="Destaque Frase (sublinhado dourado)"><i class="fas fa-paint-brush"></i></button>
+                    <button onclick="applyFormatting('highlight')" title="Marca-texto"><i class="fas fa-highlighter"></i></button>
+                    <button onclick="applyFormatting('destaque')" title="Destaque Frase (sublinhado dourado)"><i class="fas fa-paint-brush"></i></button>
                     <span class="tool-separator"></span>
-                    <button onclick="applyFormatting(&#39;blockquote&#39;)" title="Citação"><i class="fas fa-quote-right"></i></button>
-                    <button onclick="applyFormatting(&#39;callout&#39;)" title="Caixa de Destaque ★"><i class="fas fa-star"></i></button>
-                    <button onclick="applyFormatting(&#39;info&#39;)" title="Painel Informativo"><i class="fas fa-info-circle"></i></button>
-                    <button onclick="applyFormatting(&#39;warning&#39;)" title="Painel de Alerta"><i class="fas fa-exclamation-triangle"></i></button>
-                    <button onclick="applyFormatting(&#39;pullquote&#39;)" title="Frase Destacada Central"><i class="fas fa-quote-left"></i></button>
+                    <button onclick="applyFormatting('blockquote')" title="Citação"><i class="fas fa-quote-right"></i></button>
+                    <button onclick="applyFormatting('callout')" title="Caixa de Destaque ★"><i class="fas fa-star"></i></button>
+                    <button onclick="applyFormatting('info')" title="Painel Informativo"><i class="fas fa-info-circle"></i></button>
+                    <button onclick="applyFormatting('warning')" title="Painel de Alerta"><i class="fas fa-exclamation-triangle"></i></button>
+                    <button onclick="applyFormatting('pullquote')" title="Frase Destacada Central"><i class="fas fa-quote-left"></i></button>
                     <span class="tool-separator"></span>
-                    <button onclick="openBodyImageModal(&#39;main&#39;)" title="Inserir Imagem no Corpo (dispositivo ou URL)"><i class="fas fa-image"></i></button>
-                    <button onclick="applyFormatting(&#39;h2&#39;)" title="Título H2">H2</button>
-                    <button onclick="applyFormatting(&#39;h3&#39;)" title="Título H3">H3</button>
-                    <button onclick="applyFormatting(&#39;paragraph&#39;)" title="Parágrafo"><i class="fas fa-paragraph"></i></button>
+                    <button onclick="openBodyImageModal('main')" title="Inserir Imagem no Corpo (dispositivo ou URL)"><i class="fas fa-image"></i></button>
+                    <button onclick="applyFormatting('h2')" title="Título H2">H2</button>
+                    <button onclick="applyFormatting('h3')" title="Título H3">H3</button>
+                    <button onclick="applyFormatting('paragraph')" title="Parágrafo"><i class="fas fa-paragraph"></i></button>
                     <span class="tool-separator"></span>
-                    <button onclick="applyFormatting(&#39;increaseFont&#39;)" title="Aumentar fonte"><i class="fas fa-plus-circle"></i></button>
-                    <button onclick="applyFormatting(&#39;decreaseFont&#39;)" title="Diminuir fonte"><i class="fas fa-minus-circle"></i></button>
-                    <button onclick="applyFormatting(&#39;justifyLeft&#39;)" title="Alinhar à esquerda"><i class="fas fa-align-left"></i></button>
-                    <button onclick="applyFormatting(&#39;justifyCenter&#39;)" title="Centralizar"><i class="fas fa-align-center"></i></button>
-                    <button onclick="applyFormatting(&#39;justifyRight&#39;)" title="Alinhar à direita"><i class="fas fa-align-right"></i></button>
-                    <button onclick="applyFormatting(&#39;justifyFull&#39;)" title="Justificar"><i class="fas fa-align-justify"></i></button>
+                    <button onclick="applyFormatting('increaseFont')" title="Aumentar fonte"><i class="fas fa-plus-circle"></i></button>
+                    <button onclick="applyFormatting('decreaseFont')" title="Diminuir fonte"><i class="fas fa-minus-circle"></i></button>
+                    <button onclick="applyFormatting('justifyLeft')" title="Alinhar à esquerda"><i class="fas fa-align-left"></i></button>
+                    <button onclick="applyFormatting('justifyCenter')" title="Centralizar"><i class="fas fa-align-center"></i></button>
+                    <button onclick="applyFormatting('justifyRight')" title="Alinhar à direita"><i class="fas fa-align-right"></i></button>
+                    <button onclick="applyFormatting('justifyFull')" title="Justificar"><i class="fas fa-align-justify"></i></button>
                     <span class="tool-separator"></span>
-                    <button onclick="applyUndoRedo(&#39;undo&#39;)" title="Desfazer"><i class="fas fa-undo-alt"></i></button>
-                    <button onclick="applyUndoRedo(&#39;redo&#39;)" title="Refazer"><i class="fas fa-redo-alt"></i></button>
-                    <button onclick="applyFormatting(&#39;removeFormat&#39;)" title="Remover formatação"><i class="fas fa-eraser"></i></button>
+                    <button onclick="applyUndoRedo('undo')" title="Desfazer"><i class="fas fa-undo-alt"></i></button>
+                    <button onclick="applyUndoRedo('redo')" title="Refazer"><i class="fas fa-redo-alt"></i></button>
+                    <button onclick="applyFormatting('removeFormat')" title="Remover formatação"><i class="fas fa-eraser"></i></button>
                 </div>
-                <textarea id="htmlContent" placeholder="&lt;h2&gt;Introdução&lt;/h2&gt;&lt;p&gt;Seu texto...&lt;/p&gt;" rows="12" oninput="updatePreview()">&lt;p&gt;O cultivo de rosas é uma arte milenar que combina paciência, conhecimento botânico e sensibilidade estética. Neste guia, exploramos desde a escolha das variedades até os cuidados essenciais para manter suas roseiras sempre exuberantes.&lt;/p&gt;
-&lt;h2&gt;Escolha das variedades&lt;/h2&gt;
-&lt;p&gt;As rosas híbridas de chá, as floribundas e as trepadeiras são algumas das opções mais procuradas pelos jardineiros. Cada uma exige condições específicas de luz, solo e irrigação, fundamentais para o sucesso do plantio.&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;“A rosa é a flor que melhor simboliza a união entre a beleza efêmera e a resistência do tempo.” — Roberto Burle Marx&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h3&gt;Preparo do solo&lt;/h3&gt;
-&lt;p&gt;O solo ideal para o cultivo de rosas deve ser rico em matéria orgânica, bem drenado e com pH levemente ácido. A adição de farinha de ossos e torta de mamona potencializa a floração.&lt;/p&gt;
-&lt;div class="callout-box"&gt;&lt;p&gt;Dica de ouro: sempre regue as roseiras pela manhã, diretamente na base, para evitar o aparecimento de fungos nas folhas.&lt;/p&gt;&lt;/div&gt;
-&lt;h2&gt;Poda e manutenção&lt;/h2&gt;
-&lt;p&gt;A poda anual, realizada no inverno, estimula o crescimento de novos ramos e garante uma florada mais intensa na primavera. É importante remover galhos secos e cruzados, mantendo o centro da planta arejado.&lt;/p&gt;
-&lt;figure class="body-image size-md"&gt;&lt;img src="https://placehold.co/600x400/0a3147/b8860b?text=Rosas+do+Jardim" alt="Rosas do Jardim Secreto"&gt;&lt;figcaption&gt;Rosas do Jardim Botânico em plena floração.&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;Com dedicação e as técnicas corretas, qualquer pessoa pode transformar seu jardim em um verdadeiro santuário de cores e perfumes. O segredo está na observação diária e no respeito ao ciclo natural da planta.&lt;/p&gt;</textarea>
+                <textarea id="htmlContent" placeholder="<h2>Introdução</h2><p>Seu texto...</p>" rows="12" oninput="updatePreview()">
+<p>O cultivo de rosas é uma arte milenar que combina paciência, conhecimento botânico e sensibilidade estética. Neste guia, exploramos desde a escolha das variedades até os cuidados essenciais para manter suas roseiras sempre exuberantes.</p>
+<h2>Escolha das variedades</h2>
+<p>As rosas híbridas de chá, as floribundas e as trepadeiras são algumas das opções mais procuradas pelos jardineiros. Cada uma exige condições específicas de luz, solo e irrigação, fundamentais para o sucesso do plantio.</p>
+<blockquote><p>&ldquo;A rosa é a flor que melhor simboliza a união entre a beleza efêmera e a resistência do tempo.&rdquo; &mdash; Roberto Burle Marx</p></blockquote>
+<h3>Preparo do solo</h3>
+<p>O solo ideal para o cultivo de rosas deve ser rico em matéria orgânica, bem drenado e com pH levemente ácido. A adição de farinha de ossos e torta de mamona potencializa a floração.</p>
+<div class="callout-box"><p>Dica de ouro: sempre regue as roseiras pela manhã, diretamente na base, para evitar o aparecimento de fungos nas folhas.</p></div>
+<h2>Poda e manutenção</h2>
+<p>A poda anual, realizada no inverno, estimula o crescimento de novos ramos e garante uma florada mais intensa na primavera. É importante remover galhos secos e cruzados, mantendo o centro da planta arejado.</p>
+<figure class="body-image size-md"><img src="https://placehold.co/600x400/0a3147/b8860b?text=Rosas+do+Jardim" alt="Rosas do Jardim Secreto"><figcaption>Rosas do Jardim Botânico em plena floração.</figcaption></figure>
+<p>Com dedicação e as técnicas corretas, qualquer pessoa pode transformar seu jardim em um verdadeiro santuário de cores e perfumes. O segredo está na observação diária e no respeito ao ciclo natural da planta.</p></textarea>
                 <div class="field-watermark">🔹 Ctrl+Z / Ctrl+Y para desfazer/refazer. Imagens no corpo: clique para alternar entre 5 tamanhos (muito pequeno → expandido).</div>
             </div>
             <div class="form-group">
                 <label><i class="fas fa-book"></i> Referências</label>
-                <textarea id="references" rows="4" placeholder="Insira aqui as referências bibliográficas (HTML ou texto puro). Ex:
-BURLE MARX, R. Jardins e Rosas...
-LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
+                <textarea id="references" rows="4" placeholder="Insira aqui as referências bibliográficas (HTML ou texto puro). Ex:&#10;BURLE MARX, R. Jardins e Rosas...&#10;LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
                 <div class="field-watermark">🔹 Aparecerá ao final do artigo, antes da assinatura do autor, separado por uma linha fina quase transparente. Texto em tamanho reduzido. URLs viram links automaticamente.</div>
             </div>
             <!-- ========== SELETOR DE WORKER ========== -->
@@ -253,8 +255,8 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
                     <option value="JUSTICA">⚖️ Justiça (justica.pautazero.com)</option>
                     <option value="GERAL">🌐 Geral (pautazero.com)</option>
                 </select>
-                <span class="worker-indicator" id="workerIndicator" style="display: inline-flex;">
-                    <i class="fas fa-check-circle"></i> <span id="workerIndicatorText">Teologia PautaZero (https://teologia.pautazero.com)</span>
+                <span class="worker-indicator" id="workerIndicator" style="display:none;">
+                    <i class="fas fa-check-circle"></i> <span id="workerIndicatorText"></span>
                 </span>
             </div>
             <button class="btn btn-full" onclick="sendToKV()"><i class="fas fa-rocket"></i> Publicar no KV</button>
@@ -266,7 +268,7 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
                 <button class="btn-outline-gold" id="selectFolderBtn" onclick="selectLocalFolder()" title="Selecionar uma pasta local para salvar artigos">
                     <i class="fas fa-folder-open"></i> Selecionar Pasta
                 </button>
-                <button class="btn-outline-gold" id="saveToFolderBtn" onclick="saveToSelectedFolder()" title="Salvar o artigo atual na pasta selecionada" disabled="">
+                <button class="btn-outline-gold" id="saveToFolderBtn" onclick="saveToSelectedFolder()" title="Salvar o artigo atual na pasta selecionada" disabled>
                     <i class="fas fa-save"></i> Salvar na Pasta
                 </button>
                 <span class="folder-indicator" id="folderIndicator" style="display:none;">
@@ -278,7 +280,7 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
         <div class="preview-panel" id="articlePreview">
             <header class="site-header">
                 <div class="header-inner">
-                    <a href="https://velocityarticle.pages.dev/" class="logo" id="prevLogo">Pauta Zero</a>
+                    <a href="/" class="logo" id="prevLogo">Pauta<span>Zero</span></a>
                     <div class="tagline" id="prevTagline">jardinagem · beleza · natureza</div>
                 </div>
                 <div class="top-nav-buttons">
@@ -287,54 +289,46 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
             <hr class="ethereal-divider" aria-hidden="true">
             <div class="context-toggle-bar" id="contextToggleBar">
                 <span class="label"><i class="fas fa-palette"></i> Contexto:</span>
-                <button class="context-toggle-btn active" onclick="setContextMode(&#39;padrao&#39;)" id="ctxBtnPadrao">Padrão</button>
-                <button class="context-toggle-btn" onclick="setContextMode(&#39;revista&#39;)" id="ctxBtnRevista">Revista</button>
+                <button class="context-toggle-btn active" onclick="setContextMode('padrao')" id="ctxBtnPadrao">Padrão</button>
+                <button class="context-toggle-btn" onclick="setContextMode('revista')" id="ctxBtnRevista">Revista</button>
             </div>
             <div class="container">
                 <div class="breadcrumb">
-                    <a href="https://velocityarticle.pages.dev/" id="prevBreadHome">PAUTA ZERO</a> /
-                    <a href="https://velocityarticle.pages.dev/" id="prevEixoLink">plantas-e-natureza</a> /
-                    <a href="https://velocityarticle.pages.dev/" id="prevTemaLink" style="color:var(--aged-gold); text-decoration:none;">rosas</a>
+                    <a href="/" id="prevBreadHome">PAUTA ZERO</a> /
+                    <a href="/" id="prevEixoLink">plantas-e-natureza</a> /
+                    <a href="/" id="prevTemaLink" style="color:var(--aged-gold); text-decoration:none;">rosas</a>
                 </div>
                 <div class="article-dual-column">
                     <div class="article-image-col">
-                        <img id="prevImage" src="./Velocity Article Engine · Super Eigend · Super IA_files/b8860b" alt="Preview" loading="lazy">
+                        <img id="prevImage" src="https://placehold.co/600x400/0a3147/b8860b?text=Rosas" alt="Preview" loading="lazy">
                         <div class="image-caption" id="prevCaption">Rosas do Jardim Botânico</div>
-                        <div class="same-theme-articles" id="prevRelated" style="display: block;">
+                        <div class="same-theme-articles" id="prevRelated" style="display:none;">
                             <h5><i class="fas fa-check-circle"></i> Relacionados</h5>
-                            <ul class="same-theme-list" id="prevRelatedList"><li><a href="https://velocityarticle.pages.dev/artigo/plantas-e-natureza/poda-de-roseiras.html" target="_blank" rel="noopener">poda-de-roseiras</a></li><li><a href="https://velocityarticle.pages.dev/artigo/plantas-e-natureza/adubacao-organica.html" target="_blank" rel="noopener">adubacao-organica</a></li></ul>
+                            <ul class="same-theme-list" id="prevRelatedList"></ul>
                         </div>
                     </div>
                     <div class="article-text-col">
                         <h1 class="article-title" id="prevTitle">O Cultivo de Rosas: Da Tradição à Inovação</h1>
-                        <p class="article-subtitle" id="prevSubtitle" style="display: block;">Um guia completo para o cultivo de roseiras em ambientes tropicais</p>
+                        <p class="article-subtitle" id="prevSubtitle">Um guia completo para o cultivo de roseiras em ambientes tropicais</p>
                         <div class="title-gold-line"></div>
                         <div class="article-meta">
-                            <span><i class="far fa-calendar-alt"></i> <span id="prevDate">3 de junho de 2026</span></span>
+                            <span><i class="far fa-calendar-alt"></i> <span id="prevDate"></span></span>
                             <span><i class="fas fa-tag"></i> <span id="prevTemaMeta">rosas</span></span>
                             <span><i class="far fa-clock"></i> <span id="prevReadTime">8 min</span></span>
                         </div>
                         <div class="share-bar">
                             <span class="share-label">Compartilhe:</span>
                             <div class="share-icons">
-                                <a href="javascript:void(0)" onclick="shareArticle(&#39;facebook&#39;)" title="Compartilhar no Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="javascript:void(0)" onclick="shareArticle(&#39;x&#39;)" title="Compartilhar no X"><i class="fa-brands fa-x-twitter"></i></a>
-                                <a href="javascript:void(0)" onclick="shareArticle(&#39;linkedin&#39;)" title="Compartilhar no LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="javascript:void(0)" onclick="shareArticle(&#39;whatsapp&#39;)" title="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                                <a href="javascript:void(0)" onclick="shareArticle(&#39;email&#39;)" title="Compartilhar por Email"><i class="far fa-envelope"></i></a>
+                                <a href="javascript:void(0)" onclick="shareArticle('facebook')" title="Compartilhar no Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="javascript:void(0)" onclick="shareArticle('x')" title="Compartilhar no X"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="javascript:void(0)" onclick="shareArticle('linkedin')" title="Compartilhar no LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="javascript:void(0)" onclick="shareArticle('whatsapp')" title="Compartilhar no WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                                <a href="javascript:void(0)" onclick="shareArticle('email')" title="Compartilhar por Email"><i class="far fa-envelope"></i></a>
                             </div>
                         </div>
-                        <div class="article-body" id="prevContent"><p>O cultivo de rosas é uma arte milenar que combina paciência, conhecimento botânico e sensibilidade estética. Neste guia, exploramos desde a escolha das variedades até os cuidados essenciais para manter suas roseiras sempre exuberantes.</p>
-<h2>Escolha das variedades</h2>
-<p>As rosas híbridas de chá, as floribundas e as trepadeiras são algumas das opções mais procuradas pelos jardineiros. Cada uma exige condições específicas de luz, solo e irrigação, fundamentais para o sucesso do plantio.</p>
-<blockquote><p>“A rosa é a flor que melhor simboliza a união entre a beleza efêmera e a resistência do tempo.” — Roberto Burle Marx</p></blockquote>
-<h3>Preparo do solo</h3>
-<p>O solo ideal para o cultivo de rosas deve ser rico em matéria orgânica, bem drenado e com pH levemente ácido. A adição de farinha de ossos e torta de mamona potencializa a floração.</p>
-<div class="callout-box"><p>Dica de ouro: sempre regue as roseiras pela manhã, diretamente na base, para evitar o aparecimento de fungos nas folhas.</p></div>
-<h2>Poda e manutenção</h2>
-<p>A poda anual, realizada no inverno, estimula o crescimento de novos ramos e garante uma florada mais intensa na primavera. É importante remover galhos secos e cruzados, mantendo o centro da planta arejado.</p>
-<figure class="body-image size-md"><img src="./Velocity Article Engine · Super Eigend · Super IA_files/b8860b(1)" alt="Rosas do Jardim Secreto"><figcaption>Rosas do Jardim Botânico em plena floração.</figcaption></figure>
-<p>Com dedicação e as técnicas corretas, qualquer pessoa pode transformar seu jardim em um verdadeiro santuário de cores e perfumes. O segredo está na observação diária e no respeito ao ciclo natural da planta.</p></div>
+                        <div class="article-body" id="prevContent">
+                            <p>Prévia do conteúdo...</p>
+                        </div>
                         <div id="prevReferencesSection" style="display:none;">
                             <hr class="references-divider">
                             <div class="references-section">
@@ -342,41 +336,18 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
                                 <div id="prevReferencesContent"></div>
                             </div>
                         </div>
-                        <div class="author-signature" id="prevAuthorSig" style="display: flex;">
+                        <div class="author-signature" id="prevAuthorSig">
                             <div class="author-signature-row">
-                                <img id="prevAuthorAvatar" class="author-signature-avatar" src="https://velocityarticle.pages.dev/dashboard" alt="Avatar do autor" style="display: none;">
+                                <img id="prevAuthorAvatar" class="author-signature-avatar" src="" alt="Avatar do autor" style="display: none;">
                                 <div class="author-signature-info">
                                     <span id="prevAuthorName">Dra. Flora Campos</span>
                                     <small>Colunista</small>
                                 </div>
                             </div>
-                            <p class="author-bio" id="prevAuthorBio" style="display: block;">Botânica e paisagista com mais de 20 anos de experiência em jardinagem ornamental.</p>
+                            <p class="author-bio" id="prevAuthorBio">Botânica e paisagista com mais de 20 anos de experiência em jardinagem ornamental.</p>
                         </div>
                         <!-- Compliance expansível no preview -->
-                        <div class="compliance-notice" id="prevCompliance"><details class="compliance-details" style="font-size: inherit;">
-            <summary class="compliance-summary" style="font-size:0.65rem; font-weight:500; color:var(--aged-gold); cursor:pointer; display:inline-flex; align-items:center; gap:6px; padding:6px 12px; border:1px solid rgba(184,134,11,0.2); border-radius:20px; background:rgba(184,134,11,0.04); transition:all 0.3s ease; user-select:none; list-style:none;">
-                <i class="fas fa-chevron-down" style="font-size:0.5rem; transition:transform 0.3s ease;"></i> Compliance, Transparência e Responsabilidade Editorial
-            </summary>
-            <div style="font-size:0.6rem; background:rgba(184,134,11,0.04); padding:0.8rem; border-radius:8px; max-height:200px; overflow-y:auto; line-height:1.5; color:#5a7d91; border:1px solid rgba(184,134,11,0.12); margin-top:0.5rem;">
-                <p style="margin-top:0;">O portal Revista PautaZero possui caráter estritamente informativo, opinativo, educacional e cultural. Todo o conteúdo publicado tem como objetivo promover informação, reflexão, debate público e acesso ao conhecimento, respeitando os princípios constitucionais da liberdade de expressão e da liberdade de imprensa previstos na legislação brasileira.</p>
-                <p>Os artigos, colunas, análises, entrevistas e conteúdos opinativos refletem exclusivamente a interpretação de seus respectivos autores, não constituindo aconselhamento jurídico, financeiro, médico, psicológico, político, religioso ou profissional de qualquer natureza.</p>
-                <p>A Revista PautaZero não incentiva práticas ilícitas, discurso de ódio, violência, discriminação, desinformação deliberada, manipulação de informações ou qualquer atividade contrária à legislação vigente.</p>
-                <p>Nos comprometemos com:</p>
-                <ul style="padding-left:1.2rem; margin:0.3rem 0;">
-                    <li>o respeito à Constituição Federal Brasileira;</li>
-                    <li>o cumprimento do Marco Civil da Internet (Lei nº 12.965/2014);</li>
-                    <li>a observância da Lei Geral de Proteção de Dados – LGPD (Lei nº 13.709/2018);</li>
-                    <li>o respeito aos direitos autorais e à propriedade intelectual;</li>
-                    <li>a proteção da privacidade e dos dados pessoais dos usuários;</li>
-                    <li>a transparência editorial e responsabilidade digital.</li>
-                </ul>
-                <p>Conteúdos enviados por colaboradores, colunistas, leitores ou terceiros são de responsabilidade exclusiva de seus respectivos autores.</p>
-                <p>Caso algum conteúdo publicado viole direitos autorais, direitos de imagem, privacidade, honra, legislação vigente ou contenha informações incorretas, o titular poderá solicitar revisão, correção ou remoção através de contato oficial da plataforma.</p>
-                <p>As imagens utilizadas podem possuir caráter meramente ilustrativo, institucional, jornalístico ou licenciadas de bancos públicos, gratuitos, autorizados ou de terceiros devidamente referenciados quando aplicável.</p>
-                <p>A Revista PautaZero reserva-se o direito de atualizar, corrigir, editar ou remover conteúdos a qualquer momento para adequação legal, editorial, ética ou técnica.</p>
-                <p>Ao acessar este portal, o usuário declara estar ciente destes termos e concorda com as políticas de uso, privacidade e responsabilidade editorial da plataforma.</p>
-            </div>
-        </details></div>
+                        <div class="compliance-notice" id="prevCompliance"></div>
                     </div>
                 </div>
             </div>
@@ -391,10 +362,10 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
                         <p>Geração licenciada com alto rigor editorial.</p>
                     </div>
                 </div>
-                <div class="footer-tags" id="prevFooterTags" style="display: block;">
+                <div class="footer-tags" id="prevFooterTags">
                     <i class="fas fa-tags"></i> <span id="prevTagsList">rosas · jardinagem · cultivo · flores</span>
                 </div>
-                <div class="footer-watermark" id="prevWatermark" style="display: block;">
+                <div class="footer-watermark" id="prevWatermark">
                     <i class="fas fa-fingerprint"></i> <span id="prevWatermarkText">Ref: 0002-rosas</span>
                 </div>
             </footer>
@@ -413,7 +384,7 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
         <div class="link-modal-content">
             <div class="modal-header">
                 <h3><i class="fas fa-link" style="color: var(--aged-gold); margin-right: 10px;"></i> Inserir Link</h3>
-                <button class="modal-close" onclick="closeLinkModal()">×</button>
+                <button class="modal-close" onclick="closeLinkModal()">&times;</button>
             </div>
             <div class="link-input-group">
                 <label for="linkUrlInput"><i class="fas fa-globe"></i> URL do link</label>
@@ -431,13 +402,13 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
         <div class="link-modal-content" style="max-width: 560px;">
             <div class="modal-header">
                 <h3><i class="fas fa-image" style="color: var(--aged-gold); margin-right: 10px;"></i> Inserir Imagem no Corpo do Artigo</h3>
-                <button class="modal-close" onclick="closeBodyImageModal()">×</button>
+                <button class="modal-close" onclick="closeBodyImageModal()">&times;</button>
             </div>
             <div class="body-image-upload-area" id="bodyImageUploadArea" onclick="triggerBodyImageFileInput()">
                 <i class="fas fa-cloud-upload-alt"></i>
                 <span>Clique aqui para escolher uma imagem do dispositivo</span>
                 <span class="file-name" id="bodyImageFileName"></span>
-                <img id="bodyImagePreviewThumb" class="body-image-preview-thumb" src="./Velocity Article Engine · Super Eigend · Super IA_files/dashboard" alt="Preview da imagem">
+                <img id="bodyImagePreviewThumb" class="body-image-preview-thumb" src="#" alt="Preview da imagem">
             </div>
             <div style="text-align: center; margin-bottom: 0.3rem;">
                 <button type="button" class="body-image-clear-btn" id="bodyImageClearBtn" onclick="clearBodyImageFile()">
@@ -464,75 +435,75 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
         <div class="fullscreen-editor-container">
             <div class="fullscreen-editor-header">
                 <h3><i class="fas fa-pen-fancy"></i> Editor em Tela Cheia</h3>
-                <button class="fullscreen-editor-close" onclick="closeFullscreenEditor()">×</button>
+                <button class="fullscreen-editor-close" onclick="closeFullscreenEditor()">&times;</button>
             </div>
             <div class="fullscreen-editor-tabs">
-                <button class="editor-tab active" id="tabCodigo" onclick="switchEditorTab(&#39;codigo&#39;)"><i class="fas fa-code"></i> Código</button>
-                <button class="editor-tab" id="tabVisual" onclick="switchEditorTab(&#39;visual&#39;)"><i class="fas fa-eye"></i> Visual</button>
+                <button class="editor-tab active" id="tabCodigo" onclick="switchEditorTab('codigo')"><i class="fas fa-code"></i> Código</button>
+                <button class="editor-tab" id="tabVisual" onclick="switchEditorTab('visual')"><i class="fas fa-eye"></i> Visual</button>
             </div>
             <div class="fullscreen-editor-body">
                 <div id="paneCodigo" class="editor-pane active">
                     <div class="editor-toolbar">
-                        <button onclick="applyFormattingFullscreen(&#39;bold&#39;)" title="Negrito"><i class="fas fa-bold"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;italic&#39;)" title="Itálico"><i class="fas fa-italic"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;underline&#39;)" title="Sublinhado"><i class="fas fa-underline"></i></button>
+                        <button onclick="applyFormattingFullscreen('bold')" title="Negrito"><i class="fas fa-bold"></i></button>
+                        <button onclick="applyFormattingFullscreen('italic')" title="Itálico"><i class="fas fa-italic"></i></button>
+                        <button onclick="applyFormattingFullscreen('underline')" title="Sublinhado"><i class="fas fa-underline"></i></button>
                         <button onclick="openLinkModalFullscreen()" title="Inserir Link"><i class="fas fa-link"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;highlight&#39;)" title="Marca-texto"><i class="fas fa-highlighter"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;destaque&#39;)" title="Destaque Frase"><i class="fas fa-paint-brush"></i></button>
+                        <button onclick="applyFormattingFullscreen('highlight')" title="Marca-texto"><i class="fas fa-highlighter"></i></button>
+                        <button onclick="applyFormattingFullscreen('destaque')" title="Destaque Frase"><i class="fas fa-paint-brush"></i></button>
                         <span class="tool-separator"></span>
-                        <button onclick="applyFormattingFullscreen(&#39;blockquote&#39;)" title="Citação"><i class="fas fa-quote-right"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;callout&#39;)" title="Caixa de Destaque ★"><i class="fas fa-star"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;info&#39;)" title="Painel Informativo"><i class="fas fa-info-circle"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;warning&#39;)" title="Painel de Alerta"><i class="fas fa-exclamation-triangle"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;pullquote&#39;)" title="Frase Destacada Central"><i class="fas fa-quote-left"></i></button>
+                        <button onclick="applyFormattingFullscreen('blockquote')" title="Citação"><i class="fas fa-quote-right"></i></button>
+                        <button onclick="applyFormattingFullscreen('callout')" title="Caixa de Destaque ★"><i class="fas fa-star"></i></button>
+                        <button onclick="applyFormattingFullscreen('info')" title="Painel Informativo"><i class="fas fa-info-circle"></i></button>
+                        <button onclick="applyFormattingFullscreen('warning')" title="Painel de Alerta"><i class="fas fa-exclamation-triangle"></i></button>
+                        <button onclick="applyFormattingFullscreen('pullquote')" title="Frase Destacada Central"><i class="fas fa-quote-left"></i></button>
                         <span class="tool-separator"></span>
-                        <button onclick="openBodyImageModal(&#39;fullscreen&#39;)" title="Inserir Imagem no Corpo (dispositivo ou URL)"><i class="fas fa-image"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;h2&#39;)" title="Título H2">H2</button>
-                        <button onclick="applyFormattingFullscreen(&#39;h3&#39;)" title="Título H3">H3</button>
-                        <button onclick="applyFormattingFullscreen(&#39;paragraph&#39;)" title="Parágrafo"><i class="fas fa-paragraph"></i></button>
+                        <button onclick="openBodyImageModal('fullscreen')" title="Inserir Imagem no Corpo (dispositivo ou URL)"><i class="fas fa-image"></i></button>
+                        <button onclick="applyFormattingFullscreen('h2')" title="Título H2">H2</button>
+                        <button onclick="applyFormattingFullscreen('h3')" title="Título H3">H3</button>
+                        <button onclick="applyFormattingFullscreen('paragraph')" title="Parágrafo"><i class="fas fa-paragraph"></i></button>
                         <span class="tool-separator"></span>
-                        <button onclick="applyFormattingFullscreen(&#39;increaseFont&#39;)" title="Aumentar fonte"><i class="fas fa-plus-circle"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;decreaseFont&#39;)" title="Diminuir fonte"><i class="fas fa-minus-circle"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;justifyLeft&#39;)" title="Alinhar à esquerda"><i class="fas fa-align-left"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;justifyCenter&#39;)" title="Centralizar"><i class="fas fa-align-center"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;justifyRight&#39;)" title="Alinhar à direita"><i class="fas fa-align-right"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;justifyFull&#39;)" title="Justificar"><i class="fas fa-align-justify"></i></button>
+                        <button onclick="applyFormattingFullscreen('increaseFont')" title="Aumentar fonte"><i class="fas fa-plus-circle"></i></button>
+                        <button onclick="applyFormattingFullscreen('decreaseFont')" title="Diminuir fonte"><i class="fas fa-minus-circle"></i></button>
+                        <button onclick="applyFormattingFullscreen('justifyLeft')" title="Alinhar à esquerda"><i class="fas fa-align-left"></i></button>
+                        <button onclick="applyFormattingFullscreen('justifyCenter')" title="Centralizar"><i class="fas fa-align-center"></i></button>
+                        <button onclick="applyFormattingFullscreen('justifyRight')" title="Alinhar à direita"><i class="fas fa-align-right"></i></button>
+                        <button onclick="applyFormattingFullscreen('justifyFull')" title="Justificar"><i class="fas fa-align-justify"></i></button>
                         <span class="tool-separator"></span>
-                        <button onclick="applyUndoRedoFullscreen(&#39;undo&#39;)" title="Desfazer"><i class="fas fa-undo-alt"></i></button>
-                        <button onclick="applyUndoRedoFullscreen(&#39;redo&#39;)" title="Refazer"><i class="fas fa-redo-alt"></i></button>
-                        <button onclick="applyFormattingFullscreen(&#39;removeFormat&#39;)" title="Remover formatação"><i class="fas fa-eraser"></i></button>
+                        <button onclick="applyUndoRedoFullscreen('undo')" title="Desfazer"><i class="fas fa-undo-alt"></i></button>
+                        <button onclick="applyUndoRedoFullscreen('redo')" title="Refazer"><i class="fas fa-redo-alt"></i></button>
+                        <button onclick="applyFormattingFullscreen('removeFormat')" title="Remover formatação"><i class="fas fa-eraser"></i></button>
                         <button class="detect-links-btn" onclick="detectLinksInFullscreen()"><i class="fas fa-link"></i> Links</button>
                     </div>
-                    <textarea id="fullscreenContent" placeholder="&lt;p&gt;seu texto aqui...&lt;/p&gt;"></textarea>
+                    <textarea id="fullscreenContent" placeholder="<p>seu texto aqui...</p>"></textarea>
                 </div>
                 <div id="paneVisual" class="editor-pane">
                     <div class="editor-toolbar">
-                        <button onclick="execVisualCommand(&#39;bold&#39;)" title="Negrito"><i class="fas fa-bold"></i></button>
-                        <button onclick="execVisualCommand(&#39;italic&#39;)" title="Itálico"><i class="fas fa-italic"></i></button>
-                        <button onclick="execVisualCommand(&#39;underline&#39;)" title="Sublinhado"><i class="fas fa-underline"></i></button>
+                        <button onclick="execVisualCommand('bold')" title="Negrito"><i class="fas fa-bold"></i></button>
+                        <button onclick="execVisualCommand('italic')" title="Itálico"><i class="fas fa-italic"></i></button>
+                        <button onclick="execVisualCommand('underline')" title="Sublinhado"><i class="fas fa-underline"></i></button>
                         <button onclick="openLinkModalVisual()" title="Inserir Link"><i class="fas fa-link"></i></button>
-                        <button onclick="execVisualCommand(&#39;hiliteColor&#39;,&#39;rgba(184,134,11,0.15)&#39;)" title="Marca-texto"><i class="fas fa-highlighter"></i></button>
+                        <button onclick="execVisualCommand('hiliteColor','rgba(184,134,11,0.15)')" title="Marca-texto"><i class="fas fa-highlighter"></i></button>
                         <button onclick="execVisualDestaque()" title="Destaque Frase"><i class="fas fa-paint-brush"></i></button>
                         <span class="tool-separator"></span>
-                        <button onclick="execVisualCommand(&#39;formatBlock&#39;,&#39;&lt;blockquote&gt;&#39;)" title="Citação"><i class="fas fa-quote-right"></i></button>
-                        <button onclick="execVisualWrap(&#39;callout-box&#39;)" title="Caixa de Destaque ★"><i class="fas fa-star"></i></button>
-                        <button onclick="execVisualWrap(&#39;info-panel&#39;)" title="Painel Informativo"><i class="fas fa-info-circle"></i></button>
-                        <button onclick="execVisualWrap(&#39;warning-panel&#39;)" title="Painel de Alerta"><i class="fas fa-exclamation-triangle"></i></button>
-                        <button onclick="execVisualWrap(&#39;pull-quote&#39;)" title="Frase Destacada Central"><i class="fas fa-quote-left"></i></button>
+                        <button onclick="execVisualCommand('formatBlock','<blockquote>')" title="Citação"><i class="fas fa-quote-right"></i></button>
+                        <button onclick="execVisualWrap('callout-box')" title="Caixa de Destaque ★"><i class="fas fa-star"></i></button>
+                        <button onclick="execVisualWrap('info-panel')" title="Painel Informativo"><i class="fas fa-info-circle"></i></button>
+                        <button onclick="execVisualWrap('warning-panel')" title="Painel de Alerta"><i class="fas fa-exclamation-triangle"></i></button>
+                        <button onclick="execVisualWrap('pull-quote')" title="Frase Destacada Central"><i class="fas fa-quote-left"></i></button>
                         <span class="tool-separator"></span>
-                        <button onclick="openBodyImageModal(&#39;visual&#39;)" title="Inserir Imagem (dispositivo ou URL)"><i class="fas fa-image"></i></button>
-                        <button onclick="execVisualCommand(&#39;formatBlock&#39;,&#39;h2&#39;)" title="H2">H2</button>
-                        <button onclick="execVisualCommand(&#39;formatBlock&#39;,&#39;h3&#39;)" title="H3">H3</button>
+                        <button onclick="openBodyImageModal('visual')" title="Inserir Imagem (dispositivo ou URL)"><i class="fas fa-image"></i></button>
+                        <button onclick="execVisualCommand('formatBlock','h2')" title="H2">H2</button>
+                        <button onclick="execVisualCommand('formatBlock','h3')" title="H3">H3</button>
                         <span class="tool-separator"></span>
-                        <button onclick="execVisualCommand(&#39;fontSize&#39;,&#39;1.2em&#39;)" title="Aumentar fonte"><i class="fas fa-plus-circle"></i></button>
-                        <button onclick="execVisualCommand(&#39;fontSize&#39;,&#39;0.9em&#39;)" title="Diminuir fonte"><i class="fas fa-minus-circle"></i></button>
-                        <button onclick="execVisualCommand(&#39;justifyLeft&#39;)" title="Alinhar à esquerda"><i class="fas fa-align-left"></i></button>
-                        <button onclick="execVisualCommand(&#39;justifyCenter&#39;)" title="Centralizar"><i class="fas fa-align-center"></i></button>
-                        <button onclick="execVisualCommand(&#39;justifyRight&#39;)" title="Alinhar à direita"><i class="fas fa-align-right"></i></button>
-                        <button onclick="execVisualCommand(&#39;justifyFull&#39;)" title="Justificar"><i class="fas fa-align-justify"></i></button>
+                        <button onclick="execVisualCommand('fontSize','1.2em')" title="Aumentar fonte"><i class="fas fa-plus-circle"></i></button>
+                        <button onclick="execVisualCommand('fontSize','0.9em')" title="Diminuir fonte"><i class="fas fa-minus-circle"></i></button>
+                        <button onclick="execVisualCommand('justifyLeft')" title="Alinhar à esquerda"><i class="fas fa-align-left"></i></button>
+                        <button onclick="execVisualCommand('justifyCenter')" title="Centralizar"><i class="fas fa-align-center"></i></button>
+                        <button onclick="execVisualCommand('justifyRight')" title="Alinhar à direita"><i class="fas fa-align-right"></i></button>
+                        <button onclick="execVisualCommand('justifyFull')" title="Justificar"><i class="fas fa-align-justify"></i></button>
                         <span class="tool-separator"></span>
-                        <button onclick="execVisualCommand(&#39;undo&#39;)" title="Desfazer"><i class="fas fa-undo-alt"></i></button>
-                        <button onclick="execVisualCommand(&#39;redo&#39;)" title="Refazer"><i class="fas fa-redo-alt"></i></button>
+                        <button onclick="execVisualCommand('undo')" title="Desfazer"><i class="fas fa-undo-alt"></i></button>
+                        <button onclick="execVisualCommand('redo')" title="Refazer"><i class="fas fa-redo-alt"></i></button>
                         <button class="detect-links-btn" onclick="syncVisualToCode()"><i class="fas fa-sync-alt"></i> Atualizar</button>
                     </div>
                     <div id="visualEditor" class="visual-editor" contenteditable="true"></div>
@@ -627,8 +598,7 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
             <button class="accept-btn" onclick="closeManual()"><i class="fas fa-check"></i> Entendi, fechar manual</button>
         </div>
     </div>
-    <div class="toast" id="toast" style="background: var(--petrol-blue);">✅ Publicado com sucesso em Teologia PautaZero!
-🔗 https://teologiapautazero.pages.dev/artigo/plantas-e-natureza/cultivo-de-rosas-tradicao-inovacao.html</div>
+    <div class="toast" id="toast"></div>
 
     <script>
         // =================================================================
@@ -642,11 +612,11 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
 
       const SITE_CONFIG = {
     TEOLOGIA: { 
-    worker: 'https://teologia.pautazero.com/articles',
-    domain: 'https://teologia.pautazero.com', 
-    portalName: 'Teologia PautaZero', 
-    slogan: 'fé · história · arqueologia' 
-},
+        worker: 'https://meu-worker-api.avizaecosystem.workers.dev/articles',
+        domain: 'https://teologiapautazero.pages.dev', 
+        portalName: 'Teologia PautaZero', 
+        slogan: 'fé · história · arqueologia' 
+    },
     JUSTICA: { 
         worker: 'https://meu-worker-api.avizaecosystem.workers.dev/articles',
         domain: 'https://justicapautazero.pages.dev', 
@@ -1440,7 +1410,7 @@ LORENZI, H. Manual de Jardinagem..." oninput="updatePreview()"></textarea>
         updatePreview();
 
         async function sendToKV() {
-            const html = generateFullHTML();
+            const html = document.getElementById('htmlContent').value;   // ✅ apenas o corpo
             const slug = document.getElementById('slug').value.trim();
             const eixo = document.getElementById('eixo').value.trim();
             const title = document.getElementById('title').value.trim();
@@ -1742,5 +1712,5 @@ Regras para o conteúdo HTML:
 
         console.log('🔮 Super IA Article Engine inicializado. Pronto para gerar artigos com inteligência artificial.');
     </script>
-
-</body></html>
+</body>
+</html>
